@@ -10,10 +10,13 @@
 #import "Movie.h"
 #import "MovieDAO.h"
 
+#define kKeyboardOffset 260.0f
+
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *movieTable;
-
-
+@property (nonatomic) CGRect normalFrame;
+@property (nonatomic) CGRect keyboardOpenFrame;
+@property (nonatomic, assign) id currentResponder;
 @end
 
 @implementation ViewController
@@ -21,7 +24,59 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadMovies];
+    
+    _normalFrame = self.view.frame;
+    
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resignOnTap:)];
+    [singleTap setNumberOfTapsRequired:1];
+    [singleTap setNumberOfTouchesRequired:1];
+    [self.view addGestureRecognizer:singleTap];
 }
+
+- (void)resignOnTap:(id)iSender {
+    [self.currentResponder resignFirstResponder];
+}
+
+
+-(void)createKeyboardOpenFrame:(CGFloat)keyboardHeight{
+    CGFloat keyboardOpenY = CGRectGetMinY(_normalFrame) - keyboardHeight;
+    _keyboardOpenFrame = CGRectMake(CGRectGetMinX(_normalFrame),
+                                    keyboardOpenY,
+                                    CGRectGetWidth(_normalFrame),
+                                    CGRectGetHeight(_normalFrame));
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self registerNotification];
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self unregisterNotification];
+}
+
+#pragma mark Notifications
+-(void)registerNotification{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+}
+-(void)unregisterNotification{
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardWillShowNotification
+                                                  object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardWillHideNotification
+                                                  object:nil];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -57,6 +112,34 @@
     [m setMovieYear:_movieYear.text];
     [m save];
     [self loadMovies];
+}
+
+#pragma mark Keyboard Method
+-(void)keyboardWillShow:(NSNotification *)notification{
+    
+    NSDictionary *info = [notification userInfo];
+    [self createKeyboardOpenFrame:[[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size.height];
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.25f];
+    self.view.frame = _keyboardOpenFrame;
+    [UIView commitAnimations];
+    
+}
+-(void)keyboardWillHide{
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.25f];
+    self.view.frame = _normalFrame;
+    [UIView commitAnimations];
+}
+
+#pragma mark TextField Delegate
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    self.currentResponder = textField;
+}
+-(BOOL) textFieldShouldReturn: (UITextField *) textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end
