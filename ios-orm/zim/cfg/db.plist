@@ -2,10 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>live</key>
+	<key>database</key>
 	<dict>
 		<key>database</key>
-		<string>livedb.sqlite</string>
+		<string>db.sqlite</string>
 		<key>privileges</key>
 		<array>
 			<string>SELECT</string>
