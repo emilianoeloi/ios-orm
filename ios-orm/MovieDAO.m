@@ -8,7 +8,6 @@
 
 #import "MovieDAO.h"
 #import "ZIMOrmModel.h"
-#import "Movie.h"
 #import "ZIMOrmSelectStatement.h"
 
 @implementation MovieDAO
@@ -33,6 +32,16 @@
     
     if (completion) {
         completion(list, error);
+    }
+}
+
+-(void) deleteMovie:(Movie *)movie andCompletion:(deleteMovieBlock)completion{
+    NSError *error;
+    Movie *movieToDelete = [[Movie alloc]init];
+    [movieToDelete setMovieId:movie.movieId];
+    [movieToDelete delete];
+    if (completion) {
+        completion(error);
     }
 }
 

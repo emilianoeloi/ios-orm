@@ -53,6 +53,7 @@
 		CA1504761A9C1312002CE567 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CA1504751A9C1312002CE567 /* libsqlite3.0.dylib */; };
 		CA15047B1A9C199E002CE567 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = CA15047A1A9C199E002CE567 /* Movie.m */; };
 		CA6CFE4E1A9EB2140028A1F6 /* MovieDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6CFE4D1A9EB2140028A1F6 /* MovieDAO.m */; };
+		CA6CFE541A9FD8CA0028A1F6 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6CFE531A9FD8CA0028A1F6 /* MovieCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +166,8 @@
 		CA6CFE4D1A9EB2140028A1F6 /* MovieDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDAO.m; sourceTree = "<group>"; };
 		CA6CFE4F1A9EB7E10028A1F6 /* DAOConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DAOConstants.h; sourceTree = "<group>"; };
 		CA6CFE501A9EB8680028A1F6 /* IOSORM-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IOSORM-Prefix.pch"; sourceTree = "<group>"; };
+		CA6CFE521A9FD8CA0028A1F6 /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
+		CA6CFE531A9FD8CA0028A1F6 /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -396,6 +399,8 @@
 		CA1504771A9C144A002CE567 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				CA6CFE521A9FD8CA0028A1F6 /* MovieCell.h */,
+				CA6CFE531A9FD8CA0028A1F6 /* MovieCell.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -527,6 +532,7 @@
 				CA1504581A9C1090002CE567 /* ZIMSqlCreateTableStatement.m in Sources */,
 				CA1504571A9C1090002CE567 /* ZIMSqlCreateIndexStatement.m in Sources */,
 				CA1504631A9C1090002CE567 /* ZIMSqlInsertStatement.m in Sources */,
+				CA6CFE541A9FD8CA0028A1F6 /* MovieCell.m in Sources */,
 				CA1504551A9C1090002CE567 /* ZIMSqlAnalyzeStatement.m in Sources */,
 				CA1504541A9C1090002CE567 /* ZIMSqlAlterTableStatement.m in Sources */,
 				CA15046D1A9C1090002CE567 /* ZIMSqlTruncateTableStatement.m in Sources */,

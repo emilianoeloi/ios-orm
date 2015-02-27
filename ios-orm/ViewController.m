@@ -9,10 +9,11 @@
 #import "ViewController.h"
 #import "Movie.h"
 #import "MovieDAO.h"
+#import "MovieCell.h"
 
 #define kKeyboardOffset 260.0f
 
-@interface ViewController ()
+@interface ViewController ()<MovieCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *movieTable;
 @property (nonatomic) CGRect normalFrame;
 @property (nonatomic) CGRect keyboardOpenFrame;
@@ -20,6 +21,8 @@
 @end
 
 @implementation ViewController
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -92,9 +95,10 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MovieCell_ID" forIndexPath:indexPath];
+    MovieCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MovieCell_ID" forIndexPath:indexPath];
+    cell.viewControllerDelegate = self;
     Movie *movie = _movies[indexPath.row];
-    cell.textLabel.text = movie.movieTitle;
+    [cell setMovie:movie];
     return cell;
 }
 
@@ -140,6 +144,16 @@
 -(BOOL) textFieldShouldReturn: (UITextField *) textField {
     [textField resignFirstResponder];
     return YES;
+}
+
+#pragma mark MovieCell Delegate
+-(void)loadMovieToEdit:(Movie *)movie{
+    
+}
+-(void)deleteMovie:(Movie *)movie{
+    [[MovieDAO sharedDAO] deleteMovie:movie andCompletion:^(NSError *error) {
+        [self loadMovies];
+    }];
 }
 
 @end

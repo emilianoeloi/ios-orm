@@ -10,5 +10,6 @@
 #define ios_orm_DAOConstants_h
 
 typedef void (^fetchMoviesBlock)(NSArray* list, NSError *error);
+typedef void (^deleteMovieBlock)(NSError* error);
 
 #endif

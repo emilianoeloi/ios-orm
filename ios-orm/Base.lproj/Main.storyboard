@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -21,12 +21,49 @@
                                 <rect key="frame" x="16" y="20" width="568" height="380"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell_ID" id="gJQ-oe-Xyi">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell_ID" id="gJQ-oe-Xyi" customClass="MovieCell">
                                         <rect key="frame" x="0.0" y="0.0" width="568" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gJQ-oe-Xyi" id="w3F-Qp-ePW">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeH-TF-yS4">
+                                                    <rect key="frame" x="492" y="7" width="30" height="30"/>
+                                                    <state key="normal" title="U">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="updateMovie:" destination="gJQ-oe-Xyi" eventType="touchUpInside" id="o8i-Iv-ild"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuR-oL-smG">
+                                                    <rect key="frame" x="530" y="7" width="30" height="30"/>
+                                                    <state key="normal" title="D">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="deleteMovie:" destination="gJQ-oe-Xyi" eventType="touchUpInside" id="izh-KE-d24"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJ9-Bp-OaQ">
+                                                    <rect key="frame" x="8" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nJ9-Bp-OaQ" firstAttribute="leading" secondItem="w3F-Qp-ePW" secondAttribute="leadingMargin" id="4hB-PY-tnx"/>
+                                                <constraint firstAttribute="centerY" secondItem="YuR-oL-smG" secondAttribute="centerY" id="5Rs-sE-p6d"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="YuR-oL-smG" secondAttribute="trailing" id="RY5-j4-bxb"/>
+                                                <constraint firstItem="TeH-TF-yS4" firstAttribute="centerY" secondItem="YuR-oL-smG" secondAttribute="centerY" id="StZ-aU-CIu"/>
+                                                <constraint firstAttribute="centerY" secondItem="nJ9-Bp-OaQ" secondAttribute="centerY" id="YjW-t0-b99"/>
+                                                <constraint firstItem="YuR-oL-smG" firstAttribute="leading" secondItem="TeH-TF-yS4" secondAttribute="trailing" constant="8" symbolic="YES" id="drA-FP-NxL"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="movieTitle" destination="nJ9-Bp-OaQ" id="VzF-Qu-OB8"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
