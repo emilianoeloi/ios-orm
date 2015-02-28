@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 
+@property (weak, nonatomic) IBOutlet UILabel *formTitle;
 @property (nonatomic, strong) NSArray *movies;
 @property (weak, nonatomic) IBOutlet UITextField *movieTitle;
 @property (weak, nonatomic) IBOutlet UITextField *movieYear;

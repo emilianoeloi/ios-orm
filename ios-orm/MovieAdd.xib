@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieAdd">
+            <connections>
+                <outlet property="btnCancel" destination="94n-2h-NP3" id="RZz-Jp-Oae"/>
+                <outlet property="btnSave" destination="hIJ-y8-dwt" id="DBg-JU-OvI"/>
+                <outlet property="txtMovieTitle" destination="rSV-oX-DBo" id="ui4-sT-i2u"/>
+                <outlet property="txtMovieYear" destination="da5-UB-irU" id="UPg-ea-cNZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Movie" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pj-uL-EIr">
+                    <rect key="frame" x="257" y="20" width="86" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6X-M7-pax">
+                    <rect key="frame" x="20" y="49" width="84" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" id="VnQ-ah-PeP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="VnQ-ah-PeP"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="VnQ-ah-PeP"/>
+                        </mask>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Year" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KgQ-Mj-hLI">
+                    <rect key="frame" x="20" y="100" width="85" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" id="fyM-fC-QSF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="fyM-fC-QSF"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="fyM-fC-QSF"/>
+                        </mask>
+                    </variation>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movie Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rSV-oX-DBo">
+                    <rect key="frame" x="112" y="49" width="468" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="112" y="49" width="268" height="30"/>
+                    </variation>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movie Year" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="da5-UB-irU">
+                    <rect key="frame" x="113" y="100" width="467" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="113" y="100" width="267" height="30"/>
+                    </variation>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0LN-U9-i8t">
+                    <rect key="frame" x="150" y="130" width="300" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIJ-y8-dwt">
+                            <rect key="frame" x="246" y="22" width="34" height="30"/>
+                            <state key="normal" title="Save">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="saveMovieAdd:" destination="-1" eventType="touchUpInside" id="9Fy-KO-SCg"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94n-2h-NP3">
+                            <rect key="frame" x="20" y="22" width="48" height="30"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelMovieAdd:" destination="-1" eventType="touchUpInside" id="KU3-KM-T7B"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="hIJ-y8-dwt" firstAttribute="top" secondItem="0LN-U9-i8t" secondAttribute="top" constant="22" id="0gs-v6-Nia"/>
+                        <constraint firstItem="94n-2h-NP3" firstAttribute="leading" secondItem="0LN-U9-i8t" secondAttribute="leading" constant="20" id="33v-QI-YlS"/>
+                        <constraint firstAttribute="height" constant="50" id="g0k-fA-0nj"/>
+                        <constraint firstItem="94n-2h-NP3" firstAttribute="top" secondItem="0LN-U9-i8t" secondAttribute="top" constant="22" id="kev-hX-MTH"/>
+                        <constraint firstAttribute="trailing" secondItem="hIJ-y8-dwt" secondAttribute="trailing" constant="20" id="oj5-tG-mQN"/>
+                        <constraint firstAttribute="width" constant="300" id="xb7-Yn-TrW"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="0LN-U9-i8t" firstAttribute="top" secondItem="da5-UB-irU" secondAttribute="bottom" id="3eH-UG-yUh"/>
+                <constraint firstAttribute="centerX" secondItem="3pj-uL-EIr" secondAttribute="centerX" id="91n-rg-7LV"/>
+                <constraint firstItem="3pj-uL-EIr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" symbolic="YES" id="AwN-l3-xdu"/>
+                <constraint firstAttribute="trailing" secondItem="rSV-oX-DBo" secondAttribute="trailing" constant="20" symbolic="YES" id="Bzv-DY-ORI"/>
+                <constraint firstItem="KgQ-Mj-hLI" firstAttribute="top" secondItem="N6X-M7-pax" secondAttribute="bottom" constant="30" id="JyQ-gz-H74"/>
+                <constraint firstAttribute="centerX" secondItem="0LN-U9-i8t" secondAttribute="centerX" id="MQc-1Y-10H"/>
+                <constraint firstItem="N6X-M7-pax" firstAttribute="leading" secondItem="KgQ-Mj-hLI" secondAttribute="leading" id="O04-VU-uX3"/>
+                <constraint firstItem="N6X-M7-pax" firstAttribute="top" secondItem="3pj-uL-EIr" secondAttribute="bottom" constant="8" symbolic="YES" id="UcI-1G-Xdv"/>
+                <constraint firstItem="rSV-oX-DBo" firstAttribute="leading" secondItem="N6X-M7-pax" secondAttribute="trailing" constant="8" symbolic="YES" id="acX-FF-WV5">
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstItem="da5-UB-irU" firstAttribute="top" secondItem="KgQ-Mj-hLI" secondAttribute="top" id="blv-7D-Z1I"/>
+                <constraint firstItem="rSV-oX-DBo" firstAttribute="top" secondItem="N6X-M7-pax" secondAttribute="top" id="e8b-Zg-Eus"/>
+                <constraint firstItem="N6X-M7-pax" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="lr2-RS-Ai8"/>
+                <constraint firstItem="da5-UB-irU" firstAttribute="leading" secondItem="KgQ-Mj-hLI" secondAttribute="trailing" constant="8" symbolic="YES" id="mD8-4t-uDt">
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="da5-UB-irU" secondAttribute="trailing" constant="20" symbolic="YES" id="rh8-q1-w7e"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

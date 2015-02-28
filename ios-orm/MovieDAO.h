@@ -7,12 +7,13 @@
 //
 
 #import "DAOConstants.h"
-#import "Movie.h"
 
 @interface MovieDAO : NSObject
 
 +(instancetype)sharedDAO;
 -(void) fetchMovies:(fetchMoviesBlock)completion;
+-(void) insertMovie:(Movie *)movie andCompletion:(insertMovieBlock)completion;
+-(void) updateMovie:(Movie *)movie andCompletion:(updateMovieBlock)completion;
 -(void) deleteMovie:(Movie *)movie andCompletion:(deleteMovieBlock)completion;
 
 @end

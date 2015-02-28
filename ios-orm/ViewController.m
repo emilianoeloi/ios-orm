@@ -10,19 +10,20 @@
 #import "Movie.h"
 #import "MovieDAO.h"
 #import "MovieCell.h"
+#import "MovieAdd.h"
 
 #define kKeyboardOffset 260.0f
 
-@interface ViewController ()<MovieCellDelegate>
+@interface ViewController ()<MovieCellDelegate, MovieAddDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *movieTable;
 @property (nonatomic) CGRect normalFrame;
 @property (nonatomic) CGRect keyboardOpenFrame;
 @property (nonatomic, assign) id currentResponder;
+@property (weak, nonatomic) IBOutlet MovieAdd *viewMovieAdd;
+
 @end
 
 @implementation ViewController
-
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,6 +35,8 @@
     [singleTap setNumberOfTapsRequired:1];
     [singleTap setNumberOfTouchesRequired:1];
     [self.view addGestureRecognizer:singleTap];
+    
+    _viewMovieAdd.delegate = self;
 }
 
 - (void)resignOnTap:(id)iSender {
@@ -114,8 +117,11 @@
     Movie *m = [[Movie alloc]init];
     [m setMovieTitle:_movieTitle.text];
     [m setMovieYear:_movieYear.text];
-    [m save];
-    [self loadMovies];
+    [[MovieDAO sharedDAO] insertMovie:m andCompletion:^(Movie *movie, NSError *error) {
+        [self loadMovies];
+    }];
+    [self.currentResponder resignFirstResponder];
+    
 }
 
 #pragma mark Keyboard Method
@@ -125,14 +131,14 @@
     [self createKeyboardOpenFrame:[[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size.height];
     
     [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.25f];
+    [UIView setAnimationDuration:0.40f];
     self.view.frame = _keyboardOpenFrame;
     [UIView commitAnimations];
     
 }
 -(void)keyboardWillHide{
     [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.25f];
+    [UIView setAnimationDuration:0.10f];
     self.view.frame = _normalFrame;
     [UIView commitAnimations];
 }
@@ -152,6 +158,16 @@
 }
 -(void)deleteMovie:(Movie *)movie{
     [[MovieDAO sharedDAO] deleteMovie:movie andCompletion:^(NSError *error) {
+        [self loadMovies];
+    }];
+}
+
+#pragma mark MovieAdd Delegate
+-(void)cancelMovieAdd{
+    
+}
+-(void)saveMovieAdd:(Movie *)movie{
+    [[MovieDAO sharedDAO] insertMovie:movie andCompletion:^(Movie *movie, NSError *error) {
         [self loadMovies];
     }];
 }

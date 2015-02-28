@@ -71,60 +71,27 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Z9s-HB-cbx"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Uj-Jf-Gxi">
-                                <rect key="frame" x="279" y="415" width="47" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movie Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sk3-9L-r02">
-                                <rect key="frame" x="16" y="444" width="568" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="vfw-9j-Ovg"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjT-fm-qez">
-                                <rect key="frame" x="279" y="520" width="43" height="30"/>
-                                <state key="normal" title="Salvar">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="movieSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eAd-zt-lyB"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movie Year" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="09A-aE-yvO">
-                                <rect key="frame" x="16" y="482" width="568" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="E3D-ek-cTB"/>
-                                </connections>
-                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xnf-sA-kz8" customClass="MovieAdd">
+                                <rect key="frame" x="0.0" y="400" width="600" height="200"/>
+                                <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="sk3-9L-r02" firstAttribute="top" secondItem="2Uj-Jf-Gxi" secondAttribute="bottom" constant="8" symbolic="YES" id="5KX-ne-cYe"/>
-                            <constraint firstItem="sk3-9L-r02" firstAttribute="leading" secondItem="QbZ-nH-ZDf" secondAttribute="leading" id="7Ee-WZ-9lc"/>
                             <constraint firstItem="QbZ-nH-ZDf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="83u-zN-odD"/>
                             <constraint firstItem="QbZ-nH-ZDf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8AA-Cl-LfA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QbZ-nH-ZDf" secondAttribute="trailing" id="9JF-EW-aZp"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QbZ-nH-ZDf" secondAttribute="bottom" constant="200" id="9qJ-33-Nf4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="sk3-9L-r02" secondAttribute="trailing" id="Djj-86-U2S"/>
-                            <constraint firstItem="qjT-fm-qez" firstAttribute="centerX" secondItem="09A-aE-yvO" secondAttribute="centerX" id="IFu-M7-2qy"/>
-                            <constraint firstItem="2Uj-Jf-Gxi" firstAttribute="centerX" secondItem="QbZ-nH-ZDf" secondAttribute="centerX" constant="2.5" id="Yaf-3z-ep3"/>
-                            <constraint firstItem="2Uj-Jf-Gxi" firstAttribute="top" secondItem="QbZ-nH-ZDf" secondAttribute="bottom" constant="15" id="bM6-4d-jUU"/>
-                            <constraint firstItem="qjT-fm-qez" firstAttribute="top" secondItem="09A-aE-yvO" secondAttribute="bottom" constant="8" symbolic="YES" id="cX6-aJ-5NH"/>
-                            <constraint firstItem="09A-aE-yvO" firstAttribute="top" secondItem="sk3-9L-r02" secondAttribute="bottom" constant="8" symbolic="YES" id="db6-HB-DI8"/>
-                            <constraint firstItem="sk3-9L-r02" firstAttribute="leading" secondItem="09A-aE-yvO" secondAttribute="leading" id="fVi-0n-Svg"/>
-                            <constraint firstItem="09A-aE-yvO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="w64-F1-MUx"/>
+                            <constraint firstAttribute="trailing" secondItem="Xnf-sA-kz8" secondAttribute="trailing" id="B6p-Jt-61I"/>
+                            <constraint firstItem="Xnf-sA-kz8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Cts-nU-lVV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xnf-sA-kz8" secondAttribute="bottom" id="QeV-SU-f0o"/>
+                            <constraint firstItem="Xnf-sA-kz8" firstAttribute="top" secondItem="QbZ-nH-ZDf" secondAttribute="bottom" id="Yyk-nu-K50"/>
+                            <constraint firstItem="Xnf-sA-kz8" firstAttribute="top" secondItem="QbZ-nH-ZDf" secondAttribute="bottom" id="gtc-CD-aQb"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="movieTable" destination="QbZ-nH-ZDf" id="wVb-9R-2m6"/>
-                        <outlet property="movieTitle" destination="sk3-9L-r02" id="dUO-hu-mkn"/>
-                        <outlet property="movieYear" destination="09A-aE-yvO" id="DLy-Bt-9CH"/>
+                        <outlet property="viewMovieAdd" destination="Xnf-sA-kz8" id="Tfd-Hr-bnb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

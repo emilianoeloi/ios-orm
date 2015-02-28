@@ -54,6 +54,8 @@
 		CA15047B1A9C199E002CE567 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = CA15047A1A9C199E002CE567 /* Movie.m */; };
 		CA6CFE4E1A9EB2140028A1F6 /* MovieDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6CFE4D1A9EB2140028A1F6 /* MovieDAO.m */; };
 		CA6CFE541A9FD8CA0028A1F6 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6CFE531A9FD8CA0028A1F6 /* MovieCell.m */; };
+		CA6CFE571AA21F380028A1F6 /* MovieAdd.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA6CFE561AA21F380028A1F6 /* MovieAdd.xib */; };
+		CA6CFE5A1AA2235A0028A1F6 /* MovieAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6CFE591AA2235A0028A1F6 /* MovieAdd.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +170,9 @@
 		CA6CFE501A9EB8680028A1F6 /* IOSORM-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IOSORM-Prefix.pch"; sourceTree = "<group>"; };
 		CA6CFE521A9FD8CA0028A1F6 /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
 		CA6CFE531A9FD8CA0028A1F6 /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
+		CA6CFE561AA21F380028A1F6 /* MovieAdd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieAdd.xib; sourceTree = "<group>"; };
+		CA6CFE581AA2235A0028A1F6 /* MovieAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieAdd.h; sourceTree = "<group>"; };
+		CA6CFE591AA2235A0028A1F6 /* MovieAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieAdd.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +216,7 @@
 		CA1503D11A9BFB9C002CE567 /* ios-orm */ = {
 			isa = PBXGroup;
 			children = (
+				CA6CFE551AA21F080028A1F6 /* View */,
 				CA6CFE4B1A9EB1EE0028A1F6 /* DAO */,
 				CA1504781A9C196B002CE567 /* model */,
 				CA1504771A9C144A002CE567 /* Cell */,
@@ -424,6 +430,16 @@
 			name = DAO;
 			sourceTree = "<group>";
 		};
+		CA6CFE551AA21F080028A1F6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA6CFE561AA21F380028A1F6 /* MovieAdd.xib */,
+				CA6CFE581AA2235A0028A1F6 /* MovieAdd.h */,
+				CA6CFE591AA2235A0028A1F6 /* MovieAdd.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -508,6 +524,7 @@
 				CA15044E1A9C1090002CE567 /* db.plist in Resources */,
 				CA1503DE1A9BFB9C002CE567 /* Main.storyboard in Resources */,
 				CA1503E31A9BFB9C002CE567 /* LaunchScreen.xib in Resources */,
+				CA6CFE571AA21F380028A1F6 /* MovieAdd.xib in Resources */,
 				CA1504741A9C12C4002CE567 /* images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -542,6 +559,7 @@
 				CA1504651A9C1090002CE567 /* ZIMSqlReindexStatement.m in Sources */,
 				CA15045D1A9C1090002CE567 /* ZIMSqlDropIndexStatement.m in Sources */,
 				CA1504621A9C1090002CE567 /* ZIMSqlExpression.m in Sources */,
+				CA6CFE5A1AA2235A0028A1F6 /* MovieAdd.m in Sources */,
 				CA1504641A9C1090002CE567 /* ZIMSqlPreparedStatement.m in Sources */,
 				CA1504661A9C1090002CE567 /* ZIMSqlSelectStatement.m in Sources */,
 				CA1504691A9C1090002CE567 /* ZIMSqlShowTablesStatement.m in Sources */,
@@ -694,6 +712,7 @@
 				INFOPLIST_FILE = "ios-orm/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -706,6 +725,7 @@
 				INFOPLIST_FILE = "ios-orm/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
