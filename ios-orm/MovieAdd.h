@@ -11,16 +11,17 @@
 
 @protocol MovieAddDelegate <NSObject>
 
--(void)cancelMovieAdd;
--(void)saveMovieAdd:(Movie *)movie;
+-(void)cancelMovieAdd:(id)movieForm;
+-(void)saveMovieAdd:(id)movieForm andMovie:(Movie *)movie;
 
 @end
 
 @interface MovieAdd : UIView<UITextViewDelegate>
-@property (weak, nonatomic) IBOutlet UITextField *txtMovieTitle;
-@property (weak, nonatomic) IBOutlet UITextField *txtMovieYear;
-@property (weak, nonatomic) IBOutlet UIButton *btnCancel;
-@property (weak, nonatomic) IBOutlet UIButton *btnSave;
 @property (nonatomic, strong) id delegate;
+@property (nonatomic, assign) id currentResponder;
+
+-(CGFloat) maxYOfFormFields;
+- (IBAction)cancelMovieAdd:(id)sender;
+- (IBAction)saveMovieAdd:(id)sender;
 
 @end

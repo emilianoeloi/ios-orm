@@ -11,15 +11,18 @@
 #import "MovieDAO.h"
 #import "MovieCell.h"
 #import "MovieAdd.h"
+#import "MovieEdit.h"
 
 #define kKeyboardOffset 260.0f
+#define kFormHeight 200.0f
 
 @interface ViewController ()<MovieCellDelegate, MovieAddDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *movieTable;
 @property (nonatomic) CGRect normalFrame;
 @property (nonatomic) CGRect keyboardOpenFrame;
-@property (nonatomic, assign) id currentResponder;
 @property (weak, nonatomic) IBOutlet MovieAdd *viewMovieAdd;
+@property (weak, nonatomic) IBOutlet MovieEdit *viewMovieEdit;
+@property (weak, nonatomic) IBOutlet UIButton *btnAddMovie;
 
 @end
 
@@ -37,15 +40,32 @@
     [self.view addGestureRecognizer:singleTap];
     
     _viewMovieAdd.delegate = self;
+    _viewMovieEdit.delegate = self;
+    
+    [self screenStart:nil];
+    [self layoutBtnAddMovie];
+}
+
+-(void)layoutBtnAddMovie{
+    [_btnAddMovie setTitle:@"+" forState:UIControlStateNormal];
+    [_btnAddMovie setBackgroundColor:[UIColor redColor]];
+    [_btnAddMovie setTintColor:[UIColor whiteColor]];
+    [_btnAddMovie.layer setCornerRadius:30.0f];
+    [_btnAddMovie.layer setShadowColor:[UIColor blackColor].CGColor];
+    [_btnAddMovie.layer setShadowOpacity:0.8f];
+    [_btnAddMovie.layer setShadowRadius:3.0f];
+    [_btnAddMovie.layer setShadowOffset:CGSizeMake(2.0f, 2.0f)];
+    
 }
 
 - (void)resignOnTap:(id)iSender {
-    [self.currentResponder resignFirstResponder];
+    [_viewMovieAdd.currentResponder resignFirstResponder];
 }
 
 
--(void)createKeyboardOpenFrame:(CGFloat)keyboardHeight{
-    CGFloat keyboardOpenY = CGRectGetMinY(_normalFrame) - keyboardHeight;
+-(void)createKeyboardOpenedFrame:(CGFloat)keyboardHeight{
+    [_viewMovieAdd setNeedsLayout];
+    CGFloat keyboardOpenY = CGRectGetMinY(_normalFrame) - keyboardHeight + (CGRectGetHeight(_viewMovieAdd.frame) - [_viewMovieAdd maxYOfFormFields]) - 10;
     _keyboardOpenFrame = CGRectMake(CGRectGetMinX(_normalFrame),
                                     keyboardOpenY,
                                     CGRectGetWidth(_normalFrame),
@@ -59,6 +79,7 @@
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     [self unregisterNotification];
+    
 }
 
 #pragma mark Notifications
@@ -81,6 +102,29 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:UIKeyboardWillHideNotification
                                                   object:nil];
+}
+
+#pragma mark IBAction
+- (IBAction)openMovieAdd:(id)sender {
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.5f];
+    
+    self.view.frame = _normalFrame;
+    _movieTable.transform = CGAffineTransformTranslate(_movieTable.transform, 0, -kFormHeight);
+    _viewMovieAdd.transform = CGAffineTransformTranslate(_viewMovieAdd.transform, 0, -kFormHeight);
+    _btnAddMovie.transform = CGAffineTransformTranslate(_btnAddMovie.transform, kFormHeight, kFormHeight);
+    
+    [UIView commitAnimations];
+}
+- (IBAction)screenStart:(id)sender {
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.5f];
+    
+    _movieTable.transform = CGAffineTransformTranslate(_movieTable.transform, 0, kFormHeight*2);
+    _viewMovieAdd.transform = CGAffineTransformTranslate(_viewMovieAdd.transform, 0, kFormHeight*2);
+    _viewMovieEdit.transform =CGAffineTransformTranslate(_viewMovieEdit.transform, 0, kFormHeight);
+    
+    [UIView commitAnimations];
 }
 
 
@@ -120,7 +164,7 @@
     [[MovieDAO sharedDAO] insertMovie:m andCompletion:^(Movie *movie, NSError *error) {
         [self loadMovies];
     }];
-    [self.currentResponder resignFirstResponder];
+    [_viewMovieAdd.currentResponder resignFirstResponder];
     
 }
 
@@ -128,7 +172,7 @@
 -(void)keyboardWillShow:(NSNotification *)notification{
     
     NSDictionary *info = [notification userInfo];
-    [self createKeyboardOpenFrame:[[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size.height];
+    [self createKeyboardOpenedFrame:[[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size.height];
     
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.40f];
@@ -143,17 +187,16 @@
     [UIView commitAnimations];
 }
 
-#pragma mark TextField Delegate
-- (void)textFieldDidBeginEditing:(UITextField *)textField {
-    self.currentResponder = textField;
-}
--(BOOL) textFieldShouldReturn: (UITextField *) textField {
-    [textField resignFirstResponder];
-    return YES;
-}
-
 #pragma mark MovieCell Delegate
 -(void)loadMovieToEdit:(Movie *)movie{
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.50f];
+    
+    _movieTable.transform = CGAffineTransformTranslate(_movieTable.transform, 0, -kFormHeight);
+    _viewMovieEdit.transform = CGAffineTransformTranslate(_viewMovieEdit.transform, 0, -kFormHeight);
+    _btnAddMovie.transform = CGAffineTransformTranslate(_btnAddMovie.transform, kFormHeight, kFormHeight);
+    
+    [UIView commitAnimations];
     
 }
 -(void)deleteMovie:(Movie *)movie{
@@ -163,10 +206,24 @@
 }
 
 #pragma mark MovieAdd Delegate
--(void)cancelMovieAdd{
+-(void)cancelMovieAdd:(id)movieForm{
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.5f];
     
+    _movieTable.transform = CGAffineTransformTranslate(_movieTable.transform, 0, kFormHeight);
+    
+    if ([movieForm isKindOfClass:[MovieEdit class]]) {
+        _viewMovieEdit.transform = CGAffineTransformTranslate(_viewMovieEdit.transform, 0, kFormHeight);
+    }else{
+        _viewMovieAdd.transform = CGAffineTransformTranslate(_viewMovieAdd.transform, 0, kFormHeight);
+    }
+    
+    _btnAddMovie.transform = CGAffineTransformTranslate(_btnAddMovie.transform, -kFormHeight, -kFormHeight);
+    
+    [UIView commitAnimations];
 }
--(void)saveMovieAdd:(Movie *)movie{
+-(void)saveMovieAdd:(id)movieForm andMovie:(Movie *)movie{
+    [self cancelMovieAdd:movie];
     [[MovieDAO sharedDAO] insertMovie:movie andCompletion:^(Movie *movie, NSError *error) {
         [self loadMovies];
     }];

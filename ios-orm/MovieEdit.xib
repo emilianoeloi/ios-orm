@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieEdit">
+            <connections>
+                <outlet property="btnCancel" destination="WTm-bX-xde" id="Cwf-3j-Q0P"/>
+                <outlet property="btnSave" destination="Mgl-lz-UeE" id="5Pf-yS-Tca"/>
+                <outlet property="txtMovieTitle" destination="TN9-5M-QPM" id="yse-M7-qDE"/>
+                <outlet property="txtMovieYear" destination="SKs-hq-MfS" id="0Nj-f5-OVy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Movie" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmj-uK-dgg">
+                    <rect key="frame" x="260" y="20" width="81" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movie Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TN9-5M-QPM">
+                    <rect key="frame" x="112" y="49" width="468" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="112" y="49" width="268" height="30"/>
+                    </variation>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGm-rD-lAE">
+                    <rect key="frame" x="20" y="49" width="84" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" id="QrN-dI-XMb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="QrN-dI-XMb"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="QrN-dI-XMb"/>
+                        </mask>
+                    </variation>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movie Year" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SKs-hq-MfS">
+                    <rect key="frame" x="113" y="100" width="467" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="113" y="100" width="267" height="30"/>
+                    </variation>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Year" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="in1-ei-O7j">
+                    <rect key="frame" x="20" y="100" width="85" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" id="HnH-TM-Hlx"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="HnH-TM-Hlx"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="HnH-TM-Hlx"/>
+                        </mask>
+                    </variation>
+                </label>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fbk-w6-nVa">
+                    <rect key="frame" x="197" y="130" width="300" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTm-bX-xde">
+                            <rect key="frame" x="20" y="22" width="48" height="30"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelAcction:" destination="-1" eventType="touchUpInside" id="Hgk-sI-4G2"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgl-lz-UeE">
+                            <rect key="frame" x="246" y="22" width="34" height="30"/>
+                            <state key="normal" title="Save">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="saveAction:" destination="-1" eventType="touchUpInside" id="4AI-rJ-dyj"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="WTm-bX-xde" firstAttribute="top" secondItem="fbk-w6-nVa" secondAttribute="top" constant="22" id="LeD-Uo-1SA"/>
+                        <constraint firstItem="WTm-bX-xde" firstAttribute="leading" secondItem="fbk-w6-nVa" secondAttribute="leading" constant="20" id="aK7-p3-r9Y"/>
+                        <constraint firstAttribute="trailing" secondItem="Mgl-lz-UeE" secondAttribute="trailing" constant="20" id="jax-V7-cZF"/>
+                        <constraint firstItem="Mgl-lz-UeE" firstAttribute="top" secondItem="fbk-w6-nVa" secondAttribute="top" constant="22" id="jyH-KB-ETy"/>
+                        <constraint firstAttribute="width" constant="300" id="sYx-o9-K35"/>
+                        <constraint firstAttribute="height" constant="50" id="tJo-gm-UR0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="rGm-rD-lAE" firstAttribute="top" secondItem="Hmj-uK-dgg" secondAttribute="bottom" constant="8" symbolic="YES" id="4Qz-nL-fAv"/>
+                <constraint firstItem="SKs-hq-MfS" firstAttribute="top" secondItem="in1-ei-O7j" secondAttribute="top" id="5h0-g4-dJ4"/>
+                <constraint firstItem="TN9-5M-QPM" firstAttribute="leading" secondItem="rGm-rD-lAE" secondAttribute="trailing" constant="8" symbolic="YES" id="FbY-GT-A4t"/>
+                <constraint firstItem="fbk-w6-nVa" firstAttribute="top" secondItem="SKs-hq-MfS" secondAttribute="bottom" id="H5f-J4-swi"/>
+                <constraint firstAttribute="centerX" secondItem="Hmj-uK-dgg" secondAttribute="centerX" id="Zqq-rj-Eiq"/>
+                <constraint firstItem="rGm-rD-lAE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="aem-e0-MUD"/>
+                <constraint firstAttribute="trailing" secondItem="SKs-hq-MfS" secondAttribute="trailing" constant="20" symbolic="YES" id="eQd-tk-2bi"/>
+                <constraint firstAttribute="trailing" secondItem="TN9-5M-QPM" secondAttribute="trailing" constant="20" symbolic="YES" id="ee4-b8-pmt"/>
+                <constraint firstItem="SKs-hq-MfS" firstAttribute="leading" secondItem="in1-ei-O7j" secondAttribute="trailing" constant="8" symbolic="YES" id="f7c-Qk-HAy"/>
+                <constraint firstItem="Hmj-uK-dgg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" symbolic="YES" id="gTM-JN-hO0"/>
+                <constraint firstItem="rGm-rD-lAE" firstAttribute="leading" secondItem="in1-ei-O7j" secondAttribute="leading" id="hT1-r0-6e6"/>
+                <constraint firstItem="Hmj-uK-dgg" firstAttribute="centerX" secondItem="fbk-w6-nVa" secondAttribute="centerX" id="lHe-HB-qBC"/>
+                <constraint firstItem="TN9-5M-QPM" firstAttribute="top" secondItem="rGm-rD-lAE" secondAttribute="top" id="lZi-2M-alk"/>
+                <constraint firstItem="in1-ei-O7j" firstAttribute="top" secondItem="rGm-rD-lAE" secondAttribute="bottom" constant="30" id="ykr-oP-W6v"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

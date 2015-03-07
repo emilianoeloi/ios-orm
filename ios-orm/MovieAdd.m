@@ -8,6 +8,15 @@
 
 #import "MovieAdd.h"
 
+@interface MovieAdd()<UITextFieldDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *txtMovieTitle;
+@property (weak, nonatomic) IBOutlet UITextField *txtMovieYear;
+@property (weak, nonatomic) IBOutlet UIButton *btnCancel;
+@property (weak, nonatomic) IBOutlet UIButton *btnSave;
+    
+@end
+
 @implementation MovieAdd
 
 -(instancetype)initWithCoder:(NSCoder *)aDecoder{
@@ -17,26 +26,33 @@
     }
     return self;
 }
+
 - (IBAction)cancelMovieAdd:(id)sender {
-    if (_delegate && [_delegate respondsToSelector:@selector(cancelMovieAdd)]) {
-        [_delegate cancelMovieAdd];
+    if (_delegate && [_delegate respondsToSelector:@selector(cancelMovieAdd:)]) {
+        [_delegate cancelMovieAdd:self];
     }
 }
 - (IBAction)saveMovieAdd:(id)sender {
     Movie *movie = [[Movie alloc]init];
     [movie setMovieYear:_txtMovieYear.text];
     [movie setMovieTitle:_txtMovieTitle.text];
-    if (_delegate && [_delegate respondsToSelector:@selector(saveMovieAdd:)]) {
-        [_delegate saveMovieAdd:movie];
+    if (_delegate && [_delegate respondsToSelector:@selector(saveMovieAdd:andMovie:)]) {
+        [_delegate saveMovieAdd:self andMovie:movie];
     }
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+#pragma mark TextField Delegate
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    self.currentResponder = textField;
 }
-*/
+-(BOOL) textFieldShouldReturn: (UITextField *) textField {
+    [textField resignFirstResponder];
+    [self saveMovieAdd:nil];
+    return YES;
+}
+
+-(CGFloat) maxYOfFormFields{
+    return CGRectGetMaxY(_txtMovieYear.frame);
+}
 
 @end

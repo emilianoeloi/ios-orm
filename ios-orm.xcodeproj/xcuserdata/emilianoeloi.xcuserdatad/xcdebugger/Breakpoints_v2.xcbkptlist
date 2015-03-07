@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ios-orm/ViewController.m"
-            timestampString = "446837343.158375"
+            timestampString = "447462870.880859"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "-viewWillDisappear:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ios-orm/ViewController.m"
-            timestampString = "446837343.158375"
+            timestampString = "447462870.880859"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
-            landmarkName = "-deleteMovie:"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "-screenStart:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,43 +42,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ios-orm/ViewController.m"
-            timestampString = "446837371.386553"
+            timestampString = "447463215.598277"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
-            landmarkName = "-saveMovieAdd:"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
+            landmarkName = "-cancelMovieAdd:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController saveMovieAdd:]"
-                  moduleName = "ios-orm"
-                  urlString = "file:///Users/emilianoeloi/Documents/ios/ios-orm/ios-orm/ViewController.m"
-                  timestampString = "446837539.677838"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "170"
-                  endingLineNumber = "170"
-                  offsetFromSymbolStart = "58">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__31-[ViewController saveMovieAdd:]_block_invoke"
-                  moduleName = "ios-orm"
-                  urlString = "file:///Users/emilianoeloi/Documents/ios/ios-orm/ios-orm/ViewController.m"
-                  timestampString = "446837539.678122"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "170"
-                  endingLineNumber = "170"
-                  offsetFromSymbolStart = "91">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ios-orm/ViewController.m"
+            timestampString = "447463630.229556"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
+            landmarkName = "-saveMovieAdd:andMovie:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

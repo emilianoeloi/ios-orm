@@ -56,6 +56,8 @@
 		CA6CFE541A9FD8CA0028A1F6 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6CFE531A9FD8CA0028A1F6 /* MovieCell.m */; };
 		CA6CFE571AA21F380028A1F6 /* MovieAdd.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA6CFE561AA21F380028A1F6 /* MovieAdd.xib */; };
 		CA6CFE5A1AA2235A0028A1F6 /* MovieAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6CFE591AA2235A0028A1F6 /* MovieAdd.m */; };
+		CAD3BCDD1AAB865800662814 /* MovieEdit.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD3BCDC1AAB865800662814 /* MovieEdit.xib */; };
+		CAD3BCE01AAB874C00662814 /* MovieEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD3BCDF1AAB874C00662814 /* MovieEdit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +175,9 @@
 		CA6CFE561AA21F380028A1F6 /* MovieAdd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieAdd.xib; sourceTree = "<group>"; };
 		CA6CFE581AA2235A0028A1F6 /* MovieAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieAdd.h; sourceTree = "<group>"; };
 		CA6CFE591AA2235A0028A1F6 /* MovieAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieAdd.m; sourceTree = "<group>"; };
+		CAD3BCDC1AAB865800662814 /* MovieEdit.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieEdit.xib; sourceTree = "<group>"; };
+		CAD3BCDE1AAB874C00662814 /* MovieEdit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieEdit.h; sourceTree = "<group>"; };
+		CAD3BCDF1AAB874C00662814 /* MovieEdit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieEdit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -436,6 +441,9 @@
 				CA6CFE561AA21F380028A1F6 /* MovieAdd.xib */,
 				CA6CFE581AA2235A0028A1F6 /* MovieAdd.h */,
 				CA6CFE591AA2235A0028A1F6 /* MovieAdd.m */,
+				CAD3BCDC1AAB865800662814 /* MovieEdit.xib */,
+				CAD3BCDE1AAB874C00662814 /* MovieEdit.h */,
+				CAD3BCDF1AAB874C00662814 /* MovieEdit.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -525,6 +533,7 @@
 				CA1503DE1A9BFB9C002CE567 /* Main.storyboard in Resources */,
 				CA1503E31A9BFB9C002CE567 /* LaunchScreen.xib in Resources */,
 				CA6CFE571AA21F380028A1F6 /* MovieAdd.xib in Resources */,
+				CAD3BCDD1AAB865800662814 /* MovieEdit.xib in Resources */,
 				CA1504741A9C12C4002CE567 /* images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,6 +554,7 @@
 			files = (
 				CA15045C1A9C1090002CE567 /* ZIMSqlDetachStatement.m in Sources */,
 				CA15046C1A9C1090002CE567 /* ZIMSqlTokenizer.m in Sources */,
+				CAD3BCE01AAB874C00662814 /* MovieEdit.m in Sources */,
 				CA1504601A9C1090002CE567 /* ZIMSqlDropViewStatement.m in Sources */,
 				CA1504581A9C1090002CE567 /* ZIMSqlCreateTableStatement.m in Sources */,
 				CA1504571A9C1090002CE567 /* ZIMSqlCreateIndexStatement.m in Sources */,
@@ -712,7 +722,7 @@
 				INFOPLIST_FILE = "ios-orm/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -725,7 +735,7 @@
 				INFOPLIST_FILE = "ios-orm/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

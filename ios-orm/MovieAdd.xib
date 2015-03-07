@@ -68,6 +68,9 @@
                     <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                         <rect key="frame" x="112" y="49" width="268" height="30"/>
                     </variation>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="8iM-eZ-QxB"/>
+                    </connections>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movie Year" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="da5-UB-irU">
                     <rect key="frame" x="113" y="100" width="467" height="30"/>
@@ -76,6 +79,9 @@
                     <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                         <rect key="frame" x="113" y="100" width="267" height="30"/>
                     </variation>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="VC6-ve-59M"/>
+                    </connections>
                 </textField>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0LN-U9-i8t">
                     <rect key="frame" x="150" y="130" width="300" height="50"/>

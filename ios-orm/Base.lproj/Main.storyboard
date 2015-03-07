@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="QbZ-nH-ZDf">
-                                <rect key="frame" x="16" y="20" width="568" height="380"/>
+                                <rect key="frame" x="16" y="-380" width="568" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell_ID" id="gJQ-oe-Xyi" customClass="MovieCell">
@@ -72,26 +72,55 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xnf-sA-kz8" customClass="MovieAdd">
-                                <rect key="frame" x="0.0" y="400" width="600" height="200"/>
+                                <rect key="frame" x="0.0" y="200" width="600" height="200"/>
                                 <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Iwe-Yz-C79"/>
+                                </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ovR-fa-zar" userLabel="Movie Edit" customClass="MovieEdit">
+                                <rect key="frame" x="0.0" y="400" width="600" height="200"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Ydi-po-2LO"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SlM-aB-Ywc">
+                                <rect key="frame" x="504" y="520" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="KN2-hT-yPX"/>
+                                    <constraint firstAttribute="height" constant="60" id="lXD-3e-7WT"/>
+                                </constraints>
+                                <state key="normal" title="Novo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openMovieAdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="njF-Sd-ObG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ovR-fa-zar" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2Jl-cS-uC1"/>
                             <constraint firstItem="QbZ-nH-ZDf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="83u-zN-odD"/>
-                            <constraint firstItem="QbZ-nH-ZDf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8AA-Cl-LfA"/>
+                            <constraint firstItem="QbZ-nH-ZDf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-400" id="8AA-Cl-LfA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QbZ-nH-ZDf" secondAttribute="trailing" id="9JF-EW-aZp"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QbZ-nH-ZDf" secondAttribute="bottom" constant="200" id="9qJ-33-Nf4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QbZ-nH-ZDf" secondAttribute="bottom" constant="400" id="9qJ-33-Nf4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SlM-aB-Ywc" secondAttribute="trailing" constant="20" id="AJ8-vC-xXE"/>
                             <constraint firstAttribute="trailing" secondItem="Xnf-sA-kz8" secondAttribute="trailing" id="B6p-Jt-61I"/>
                             <constraint firstItem="Xnf-sA-kz8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Cts-nU-lVV"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xnf-sA-kz8" secondAttribute="bottom" id="QeV-SU-f0o"/>
+                            <constraint firstItem="ovR-fa-zar" firstAttribute="top" secondItem="QbZ-nH-ZDf" secondAttribute="bottom" constant="200" id="Gj4-qq-HR9"/>
                             <constraint firstItem="Xnf-sA-kz8" firstAttribute="top" secondItem="QbZ-nH-ZDf" secondAttribute="bottom" id="Yyk-nu-K50"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SlM-aB-Ywc" secondAttribute="bottom" constant="20" id="e7b-LE-J4n"/>
                             <constraint firstItem="Xnf-sA-kz8" firstAttribute="top" secondItem="QbZ-nH-ZDf" secondAttribute="bottom" id="gtc-CD-aQb"/>
+                            <constraint firstAttribute="trailing" secondItem="ovR-fa-zar" secondAttribute="trailing" id="zUr-BD-hai"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnAddMovie" destination="SlM-aB-Ywc" id="Q4v-04-vx3"/>
                         <outlet property="movieTable" destination="QbZ-nH-ZDf" id="wVb-9R-2m6"/>
                         <outlet property="viewMovieAdd" destination="Xnf-sA-kz8" id="Tfd-Hr-bnb"/>
+                        <outlet property="viewMovieEdit" destination="ovR-fa-zar" id="yFR-rU-2mT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
