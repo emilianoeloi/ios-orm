@@ -30,6 +30,9 @@
                     <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                         <rect key="frame" x="112" y="49" width="268" height="30"/>
                     </variation>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Vpm-ba-Hbk"/>
+                    </connections>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGm-rD-lAE">
                     <rect key="frame" x="20" y="49" width="84" height="21"/>
@@ -57,6 +60,9 @@
                     <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                         <rect key="frame" x="113" y="100" width="267" height="30"/>
                     </variation>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="YuL-SL-3j9"/>
+                    </connections>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Year" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="in1-ei-O7j">
                     <rect key="frame" x="20" y="100" width="85" height="21"/>
@@ -77,8 +83,8 @@
                         </mask>
                     </variation>
                 </label>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fbk-w6-nVa">
-                    <rect key="frame" x="197" y="130" width="300" height="50"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbk-w6-nVa">
+                    <rect key="frame" x="151" y="130" width="300" height="50"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTm-bX-xde">
                             <rect key="frame" x="20" y="22" width="48" height="30"/>

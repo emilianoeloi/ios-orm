@@ -24,6 +24,9 @@
 @property (weak, nonatomic) IBOutlet MovieEdit *viewMovieEdit;
 @property (weak, nonatomic) IBOutlet UIButton *btnAddMovie;
 
+@property (nonatomic) BOOL inserting;
+@property (nonatomic) BOOL editing;
+
 @end
 
 @implementation ViewController
@@ -106,6 +109,7 @@
 
 #pragma mark IBAction
 - (IBAction)openMovieAdd:(id)sender {
+    _inserting = YES;
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.5f];
     
@@ -123,6 +127,9 @@
     _movieTable.transform = CGAffineTransformTranslate(_movieTable.transform, 0, kFormHeight*2);
     _viewMovieAdd.transform = CGAffineTransformTranslate(_viewMovieAdd.transform, 0, kFormHeight*2);
     _viewMovieEdit.transform =CGAffineTransformTranslate(_viewMovieEdit.transform, 0, kFormHeight);
+    
+    _inserting = NO;
+    _editing = NO;
     
     [UIView commitAnimations];
 }
@@ -189,6 +196,7 @@
 
 #pragma mark MovieCell Delegate
 -(void)loadMovieToEdit:(Movie *)movie{
+    _viewMovieEdit.movie = movie;
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.50f];
     
@@ -222,11 +230,18 @@
     
     [UIView commitAnimations];
 }
--(void)saveMovieAdd:(id)movieForm andMovie:(Movie *)movie{
-    [self cancelMovieAdd:movie];
-    [[MovieDAO sharedDAO] insertMovie:movie andCompletion:^(Movie *movie, NSError *error) {
-        [self loadMovies];
-    }];
+-(void)saveMovie:(id)movieForm andMovie:(Movie *)movie{
+    [self cancelMovieAdd:movieForm];
+    if ([movieForm isKindOfClass:[MovieEdit class]]) {
+        [[MovieDAO sharedDAO] updateMovie:movie andCompletion:^(Movie *movie, NSError *error) {
+            [self loadMovies];
+        }];
+    }else{
+        [[MovieDAO sharedDAO] insertMovie:movie andCompletion:^(Movie *movie, NSError *error) {
+            [self loadMovies];
+        }];
+    }
+    
 }
 
 @end

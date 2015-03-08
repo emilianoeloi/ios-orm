@@ -36,8 +36,8 @@
     Movie *movie = [[Movie alloc]init];
     [movie setMovieYear:_txtMovieYear.text];
     [movie setMovieTitle:_txtMovieTitle.text];
-    if (_delegate && [_delegate respondsToSelector:@selector(saveMovieAdd:andMovie:)]) {
-        [_delegate saveMovieAdd:self andMovie:movie];
+    if (_delegate && [_delegate respondsToSelector:@selector(saveMovie:andMovie:)]) {
+        [_delegate saveMovie:self andMovie:movie];
     }
 }
 

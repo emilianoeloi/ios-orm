@@ -11,4 +11,6 @@
 
 @interface MovieEdit : MovieAdd
 
+@property (nonatomic, strong) Movie *movie;
+
 @end

@@ -30,7 +30,24 @@
     [super cancelMovieAdd:sender];
 }
 - (IBAction)saveAction:(id)sender {
-    [super saveMovieAdd:sender];
+    [_movie setMovieYear:_txtMovieYear.text];
+    [_movie setMovieTitle:_txtMovieTitle.text];
+    if (super.delegate && [super.delegate respondsToSelector:@selector(saveMovie:andMovie:)]) {
+        [super.delegate saveMovie:self andMovie:_movie];
+    }
+}
+
+-(void)setMovie:(Movie *)movie{
+    _movie = movie;
+    _txtMovieTitle.text = movie.movieTitle;
+    _txtMovieYear.text = movie.movieYear;
+}
+
+#pragma mark TextField Delegate
+-(BOOL) textFieldShouldReturn: (UITextField *) textField {
+    [textField resignFirstResponder];
+    [self saveAction:nil];
+    return YES;
 }
 
 @end

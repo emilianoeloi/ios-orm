@@ -12,7 +12,7 @@
 @protocol MovieAddDelegate <NSObject>
 
 -(void)cancelMovieAdd:(id)movieForm;
--(void)saveMovieAdd:(id)movieForm andMovie:(Movie *)movie;
+-(void)saveMovie:(id)movieForm andMovie:(Movie *)movie;
 
 @end
 
