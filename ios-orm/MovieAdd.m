@@ -55,4 +55,25 @@
     return CGRectGetMaxY(_txtMovieYear.frame);
 }
 
+-(void)show{
+    if (_beingShown) {
+        return;
+    }
+    self.transform = CGAffineTransformTranslate(self.transform, 0, -kFormHeight);
+    if (_delegate && [_delegate respondsToSelector:@selector(onShow)]) {
+        [_delegate onShow];
+    }
+    _beingShown = YES;
+}
+-(void)hide{
+    if (!_beingShown) {
+        return;
+    }
+    self.transform = CGAffineTransformTranslate(self.transform, 0, kFormHeight);
+    if (_delegate && [_delegate respondsToSelector:@selector(onHide)]) {
+        [_delegate onHide];
+    }
+    _beingShown = NO;
+}
+
 @end

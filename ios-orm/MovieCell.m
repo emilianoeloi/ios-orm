@@ -37,7 +37,7 @@
 
 -(void)setMovie:(Movie *)movie{
     _movie = movie;
-    _movieTitle.text = _movie.movieTitle;
+    _movieTitle.text = [NSString stringWithFormat:@"%@ %@",_movie.movieTitle, _movie.movieYear];
 }
 
 @end

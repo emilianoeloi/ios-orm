@@ -24,9 +24,6 @@
 @property (weak, nonatomic) IBOutlet MovieEdit *viewMovieEdit;
 @property (weak, nonatomic) IBOutlet UIButton *btnAddMovie;
 
-@property (nonatomic) BOOL inserting;
-@property (nonatomic) BOOL editing;
-
 @end
 
 @implementation ViewController
@@ -58,16 +55,16 @@
     [_btnAddMovie.layer setShadowOpacity:0.8f];
     [_btnAddMovie.layer setShadowRadius:3.0f];
     [_btnAddMovie.layer setShadowOffset:CGSizeMake(2.0f, 2.0f)];
-    
 }
 
 - (void)resignOnTap:(id)iSender {
     [_viewMovieAdd.currentResponder resignFirstResponder];
+    [_viewMovieEdit.currentResponder resignFirstResponder];
 }
 
 
 -(void)createKeyboardOpenedFrame:(CGFloat)keyboardHeight{
-    [_viewMovieAdd setNeedsLayout];
+    //[_viewMovieAdd setNeedsLayout];
     CGFloat keyboardOpenY = CGRectGetMinY(_normalFrame) - keyboardHeight + (CGRectGetHeight(_viewMovieAdd.frame) - [_viewMovieAdd maxYOfFormFields]) - 10;
     _keyboardOpenFrame = CGRectMake(CGRectGetMinX(_normalFrame),
                                     keyboardOpenY,
@@ -82,7 +79,6 @@
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     [self unregisterNotification];
-    
 }
 
 #pragma mark Notifications
@@ -109,14 +105,11 @@
 
 #pragma mark IBAction
 - (IBAction)openMovieAdd:(id)sender {
-    _inserting = YES;
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.5f];
     
     self.view.frame = _normalFrame;
-    _movieTable.transform = CGAffineTransformTranslate(_movieTable.transform, 0, -kFormHeight);
-    _viewMovieAdd.transform = CGAffineTransformTranslate(_viewMovieAdd.transform, 0, -kFormHeight);
-    _btnAddMovie.transform = CGAffineTransformTranslate(_btnAddMovie.transform, kFormHeight, kFormHeight);
+    [_viewMovieAdd show];
     
     [UIView commitAnimations];
 }
@@ -127,9 +120,6 @@
     _movieTable.transform = CGAffineTransformTranslate(_movieTable.transform, 0, kFormHeight*2);
     _viewMovieAdd.transform = CGAffineTransformTranslate(_viewMovieAdd.transform, 0, kFormHeight*2);
     _viewMovieEdit.transform =CGAffineTransformTranslate(_viewMovieEdit.transform, 0, kFormHeight);
-    
-    _inserting = NO;
-    _editing = NO;
     
     [UIView commitAnimations];
 }
@@ -177,20 +167,22 @@
 
 #pragma mark Keyboard Method
 -(void)keyboardWillShow:(NSNotification *)notification{
-    
     NSDictionary *info = [notification userInfo];
     [self createKeyboardOpenedFrame:[[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size.height];
     
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.40f];
-    self.view.frame = _keyboardOpenFrame;
-    [UIView commitAnimations];
     
+    self.view.frame = _keyboardOpenFrame;
+    
+    [UIView commitAnimations];
 }
 -(void)keyboardWillHide{
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.10f];
+    
     self.view.frame = _normalFrame;
+    
     [UIView commitAnimations];
 }
 
@@ -200,9 +192,8 @@
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.50f];
     
-    _movieTable.transform = CGAffineTransformTranslate(_movieTable.transform, 0, -kFormHeight);
-    _viewMovieEdit.transform = CGAffineTransformTranslate(_viewMovieEdit.transform, 0, -kFormHeight);
-    _btnAddMovie.transform = CGAffineTransformTranslate(_btnAddMovie.transform, kFormHeight, kFormHeight);
+    [_viewMovieAdd hide];
+    [_viewMovieEdit show];
     
     [UIView commitAnimations];
     
@@ -218,15 +209,7 @@
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.5f];
     
-    _movieTable.transform = CGAffineTransformTranslate(_movieTable.transform, 0, kFormHeight);
-    
-    if ([movieForm isKindOfClass:[MovieEdit class]]) {
-        _viewMovieEdit.transform = CGAffineTransformTranslate(_viewMovieEdit.transform, 0, kFormHeight);
-    }else{
-        _viewMovieAdd.transform = CGAffineTransformTranslate(_viewMovieAdd.transform, 0, kFormHeight);
-    }
-    
-    _btnAddMovie.transform = CGAffineTransformTranslate(_btnAddMovie.transform, -kFormHeight, -kFormHeight);
+    [movieForm hide];
     
     [UIView commitAnimations];
 }
@@ -241,7 +224,14 @@
             [self loadMovies];
         }];
     }
-    
+}
+-(void)onShow{
+    _movieTable.transform = CGAffineTransformTranslate(_movieTable.transform, 0, -kFormHeight);
+    _btnAddMovie.transform = CGAffineTransformTranslate(_btnAddMovie.transform, kFormHeight, kFormHeight);
+}
+-(void)onHide{
+    _movieTable.transform = CGAffineTransformTranslate(_movieTable.transform, 0, kFormHeight);
+    _btnAddMovie.transform = CGAffineTransformTranslate(_btnAddMovie.transform, -kFormHeight, -kFormHeight);
 }
 
 @end
