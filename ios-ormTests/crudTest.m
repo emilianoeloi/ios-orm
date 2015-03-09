@@ -11,11 +11,9 @@
 @implementation crudTest
 
 -(void)beforeEach{
-    NSLog(@"before Each");
 }
 
 -(void)afterEach{
-    NSLog(@"after Each");
 }
 
 ///FIXME: Aqui eu utilizei o alfabeto para determinar a ordem da execução dos testes, acredito que exista uma forma melhor.
