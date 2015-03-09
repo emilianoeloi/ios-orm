@@ -25,6 +25,7 @@
                 </label>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movie Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TN9-5M-QPM">
                     <rect key="frame" x="112" y="49" width="468" height="30"/>
+                    <accessibility key="accessibilityConfiguration" label="movieTitleEdit"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                     <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
@@ -55,6 +56,7 @@
                 </label>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Movie Year" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SKs-hq-MfS">
                     <rect key="frame" x="113" y="100" width="467" height="30"/>
+                    <accessibility key="accessibilityConfiguration" label="movieYearEdit"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                     <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
@@ -97,6 +99,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgl-lz-UeE">
                             <rect key="frame" x="246" y="22" width="34" height="30"/>
+                            <accessibility key="accessibilityConfiguration" label="editMovie"/>
                             <state key="normal" title="Save">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>

@@ -29,6 +29,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeH-TF-yS4">
                                                     <rect key="frame" x="492" y="7" width="30" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" label="loadToEdit"/>
                                                     <state key="normal" title="U">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -38,6 +39,7 @@
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuR-oL-smG">
                                                     <rect key="frame" x="530" y="7" width="30" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" label="deleteMovie"/>
                                                     <state key="normal" title="D">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -47,6 +49,7 @@
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJ9-Bp-OaQ">
                                                     <rect key="frame" x="8" y="11" width="42" height="21"/>
+                                                    <accessibility key="accessibilityConfiguration" label="movieDescription"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -66,6 +69,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="movieTable"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="xO0-sd-dJj"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Z9s-HB-cbx"/>
@@ -87,6 +93,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SlM-aB-Ywc">
                                 <rect key="frame" x="504" y="520" width="60" height="60"/>
+                                <accessibility key="accessibilityConfiguration" label="addButton"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="KN2-hT-yPX"/>
                                     <constraint firstAttribute="height" constant="60" id="lXD-3e-7WT"/>
