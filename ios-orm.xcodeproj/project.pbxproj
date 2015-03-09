@@ -57,7 +57,6 @@
 		CA6CFE5A1AA2235A0028A1F6 /* MovieAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6CFE591AA2235A0028A1F6 /* MovieAdd.m */; };
 		CAD3BCDD1AAB865800662814 /* MovieEdit.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD3BCDC1AAB865800662814 /* MovieEdit.xib */; };
 		CAD3BCE01AAB874C00662814 /* MovieEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD3BCDF1AAB874C00662814 /* MovieEdit.m */; };
-		CAD3BCF41AAD187300662814 /* libKIF.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD3BCEB1AAD182400662814 /* libKIF.a */; };
 		CAD3BCF61AAD189700662814 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD3BCF51AAD189700662814 /* CoreGraphics.framework */; };
 		CAD3BCF91AAD1C8700662814 /* crudTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD3BCF81AAD1C8700662814 /* crudTest.m */; };
 		CAD3BCFC1AAD1D2700662814 /* KIFUITestActor+Cinefilo.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD3BCFB1AAD1D2700662814 /* KIFUITestActor+Cinefilo.m */; };
@@ -70,41 +69,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = CA1503CE1A9BFB9C002CE567;
 			remoteInfo = "ios-orm";
-		};
-		CAD3BCEA1AAD182400662814 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CAD3BCE11AAD182400662814 /* KIF.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EABD46AA1857A0C700A5F081;
-			remoteInfo = KIF;
-		};
-		CAD3BCEC1AAD182400662814 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CAD3BCE11AAD182400662814 /* KIF.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EB72047C1680DDAD00278DA2;
-			remoteInfo = "KIF-OCUnit";
-		};
-		CAD3BCEE1AAD182400662814 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CAD3BCE11AAD182400662814 /* KIF.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EB60ECC1177F8C83005A041A;
-			remoteInfo = "Test Host";
-		};
-		CAD3BCF01AAD182400662814 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CAD3BCE11AAD182400662814 /* KIF.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EABD46CD1857A0F300A5F081;
-			remoteInfo = "KIF Tests";
-		};
-		CAD3BCF21AAD182400662814 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CAD3BCE11AAD182400662814 /* KIF.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EB60ECEB177F8DB3005A041A;
-			remoteInfo = "KIF Tests-OCUnit";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -215,7 +179,6 @@
 		CAD3BCDC1AAB865800662814 /* MovieEdit.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieEdit.xib; sourceTree = "<group>"; };
 		CAD3BCDE1AAB874C00662814 /* MovieEdit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieEdit.h; sourceTree = "<group>"; };
 		CAD3BCDF1AAB874C00662814 /* MovieEdit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieEdit.m; sourceTree = "<group>"; };
-		CAD3BCE11AAD182400662814 /* KIF.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KIF.xcodeproj; path = Frameworks/KIF/KIF.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CAD3BCF51AAD189700662814 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CAD3BCF71AAD1C8700662814 /* crudTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crudTest.h; sourceTree = "<group>"; };
 		CAD3BCF81AAD1C8700662814 /* crudTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = crudTest.m; sourceTree = "<group>"; };
@@ -237,7 +200,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAD3BCF61AAD189700662814 /* CoreGraphics.framework in Frameworks */,
-				CAD3BCF41AAD187300662814 /* libKIF.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +259,6 @@
 		CA1503EB1A9BFB9C002CE567 /* ios-ormTests */ = {
 			isa = PBXGroup;
 			children = (
-				CAD3BCE11AAD182400662814 /* KIF.xcodeproj */,
 				CA1503EC1A9BFB9C002CE567 /* Supporting Files */,
 				CAD3BCF71AAD1C8700662814 /* crudTest.h */,
 				CAD3BCF81AAD1C8700662814 /* crudTest.m */,
@@ -498,18 +459,6 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		CAD3BCE21AAD182400662814 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CAD3BCEB1AAD182400662814 /* libKIF.a */,
-				CAD3BCED1AAD182400662814 /* libKIF-OCUnit.a */,
-				CAD3BCEF1AAD182400662814 /* Test Host.app */,
-				CAD3BCF11AAD182400662814 /* KIF Tests - XCTest.xctest */,
-				CAD3BCF31AAD182400662814 /* KIF Tests-OCUnit.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -577,12 +526,6 @@
 			mainGroup = CA1503C61A9BFB9B002CE567;
 			productRefGroup = CA1503D01A9BFB9C002CE567 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = CAD3BCE21AAD182400662814 /* Products */;
-					ProjectRef = CAD3BCE11AAD182400662814 /* KIF.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				CA1503CE1A9BFB9C002CE567 /* ios-orm */,
@@ -590,44 +533,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		CAD3BCEB1AAD182400662814 /* libKIF.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libKIF.a;
-			remoteRef = CAD3BCEA1AAD182400662814 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CAD3BCED1AAD182400662814 /* libKIF-OCUnit.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libKIF-OCUnit.a";
-			remoteRef = CAD3BCEC1AAD182400662814 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CAD3BCEF1AAD182400662814 /* Test Host.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "Test Host.app";
-			remoteRef = CAD3BCEE1AAD182400662814 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CAD3BCF11AAD182400662814 /* KIF Tests - XCTest.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "KIF Tests - XCTest.xctest";
-			remoteRef = CAD3BCF01AAD182400662814 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		CAD3BCF31AAD182400662814 /* KIF Tests-OCUnit.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "KIF Tests-OCUnit.octest";
-			remoteRef = CAD3BCF21AAD182400662814 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CA1503CD1A9BFB9C002CE567 /* Resources */ = {
@@ -827,6 +732,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PREFIX_HEADER = "ios-orm/IOSORM-Prefix.pch";
 				INFOPLIST_FILE = "ios-orm/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -840,6 +746,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PREFIX_HEADER = "ios-orm/IOSORM-Prefix.pch";
 				INFOPLIST_FILE = "ios-orm/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
