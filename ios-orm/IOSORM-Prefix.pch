@@ -1,0 +1,15 @@
+//
+//  IOSORM-Prefix.pch
+//  ios-orm
+//
+//  Created by emilianoeloi on 2/25/15.
+//  Copyright (c) 2015 Emiliano Eloi. All rights reserved.
+//
+
+#ifndef ios_orm_IOSORM_Prefix_pch
+#define ios_orm_IOSORM_Prefix_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#endif

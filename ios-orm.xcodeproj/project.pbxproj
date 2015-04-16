@@ -1,0 +1,835 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA1503D51A9BFB9C002CE567 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1503D41A9BFB9C002CE567 /* main.m */; };
+		CA1503D81A9BFB9C002CE567 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1503D71A9BFB9C002CE567 /* AppDelegate.m */; };
+		CA1503DB1A9BFB9C002CE567 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1503DA1A9BFB9C002CE567 /* ViewController.m */; };
+		CA1503DE1A9BFB9C002CE567 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA1503DC1A9BFB9C002CE567 /* Main.storyboard */; };
+		CA1503E31A9BFB9C002CE567 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA1503E11A9BFB9C002CE567 /* LaunchScreen.xib */; };
+		CA15044E1A9C1090002CE567 /* db.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA1503FA1A9C1090002CE567 /* db.plist */; };
+		CA15044F1A9C1090002CE567 /* ZIMDbConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1503FE1A9C1090002CE567 /* ZIMDbConnection.m */; };
+		CA1504501A9C1090002CE567 /* ZIMDbConnectionPool.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1504001A9C1090002CE567 /* ZIMDbConnectionPool.m */; };
+		CA1504511A9C1090002CE567 /* NSString+ZIMString.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1504041A9C1090002CE567 /* NSString+ZIMString.m */; };
+		CA1504521A9C1090002CE567 /* ZIMOrmModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1504071A9C1090002CE567 /* ZIMOrmModel.m */; };
+		CA1504531A9C1090002CE567 /* ZIMOrmSelectStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA15040B1A9C1090002CE567 /* ZIMOrmSelectStatement.m */; };
+		CA1504541A9C1090002CE567 /* ZIMSqlAlterTableStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA15040E1A9C1090002CE567 /* ZIMSqlAlterTableStatement.m */; };
+		CA1504551A9C1090002CE567 /* ZIMSqlAnalyzeStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1504101A9C1090002CE567 /* ZIMSqlAnalyzeStatement.m */; };
+		CA1504561A9C1090002CE567 /* ZIMSqlAttachStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1504121A9C1090002CE567 /* ZIMSqlAttachStatement.m */; };
+		CA1504571A9C1090002CE567 /* ZIMSqlCreateIndexStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1504141A9C1090002CE567 /* ZIMSqlCreateIndexStatement.m */; };
+		CA1504581A9C1090002CE567 /* ZIMSqlCreateTableStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1504161A9C1090002CE567 /* ZIMSqlCreateTableStatement.m */; };
+		CA1504591A9C1090002CE567 /* ZIMSqlCreateTriggerStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1504181A9C1090002CE567 /* ZIMSqlCreateTriggerStatement.m */; };
+		CA15045A1A9C1090002CE567 /* ZIMSqlCreateViewStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA15041A1A9C1090002CE567 /* ZIMSqlCreateViewStatement.m */; };
+		CA15045B1A9C1090002CE567 /* ZIMSqlDeleteStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA15041F1A9C1090002CE567 /* ZIMSqlDeleteStatement.m */; };
+		CA15045C1A9C1090002CE567 /* ZIMSqlDetachStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1504211A9C1090002CE567 /* ZIMSqlDetachStatement.m */; };
+		CA15045D1A9C1090002CE567 /* ZIMSqlDropIndexStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1504231A9C1090002CE567 /* ZIMSqlDropIndexStatement.m */; };
+		CA15045E1A9C1090002CE567 /* ZIMSqlDropTableStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1504251A9C1090002CE567 /* ZIMSqlDropTableStatement.m */; };
+		CA15045F1A9C1090002CE567 /* ZIMSqlDropTriggerStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1504271A9C1090002CE567 /* ZIMSqlDropTriggerStatement.m */; };
+		CA1504601A9C1090002CE567 /* ZIMSqlDropViewStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1504291A9C1090002CE567 /* ZIMSqlDropViewStatement.m */; };
+		CA1504611A9C1090002CE567 /* ZIMSqlExplainStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA15042B1A9C1090002CE567 /* ZIMSqlExplainStatement.m */; };
+		CA1504621A9C1090002CE567 /* ZIMSqlExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = CA15042D1A9C1090002CE567 /* ZIMSqlExpression.m */; };
+		CA1504631A9C1090002CE567 /* ZIMSqlInsertStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA15042F1A9C1090002CE567 /* ZIMSqlInsertStatement.m */; };
+		CA1504641A9C1090002CE567 /* ZIMSqlPreparedStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1504311A9C1090002CE567 /* ZIMSqlPreparedStatement.m */; };
+		CA1504651A9C1090002CE567 /* ZIMSqlReindexStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1504331A9C1090002CE567 /* ZIMSqlReindexStatement.m */; };
+		CA1504661A9C1090002CE567 /* ZIMSqlSelectStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1504361A9C1090002CE567 /* ZIMSqlSelectStatement.m */; };
+		CA1504671A9C1090002CE567 /* ZIMSqlShowColumnsStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1504381A9C1090002CE567 /* ZIMSqlShowColumnsStatement.m */; };
+		CA1504681A9C1090002CE567 /* ZIMSqlShowGrantsStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA15043A1A9C1090002CE567 /* ZIMSqlShowGrantsStatement.m */; };
+		CA1504691A9C1090002CE567 /* ZIMSqlShowTablesStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA15043C1A9C1090002CE567 /* ZIMSqlShowTablesStatement.m */; };
+		CA15046A1A9C1090002CE567 /* ZIMSqlShowTriggersStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA15043E1A9C1090002CE567 /* ZIMSqlShowTriggersStatement.m */; };
+		CA15046B1A9C1090002CE567 /* ZIMSqlShowViewsStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1504401A9C1090002CE567 /* ZIMSqlShowViewsStatement.m */; };
+		CA15046C1A9C1090002CE567 /* ZIMSqlTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1504431A9C1090002CE567 /* ZIMSqlTokenizer.m */; };
+		CA15046D1A9C1090002CE567 /* ZIMSqlTruncateTableStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1504461A9C1090002CE567 /* ZIMSqlTruncateTableStatement.m */; };
+		CA15046E1A9C1090002CE567 /* ZIMSqlUpdateStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1504481A9C1090002CE567 /* ZIMSqlUpdateStatement.m */; };
+		CA15046F1A9C1090002CE567 /* ZIMSqlUpsertStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = CA15044A1A9C1090002CE567 /* ZIMSqlUpsertStatement.m */; };
+		CA1504701A9C1090002CE567 /* ZIMMessageDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = CA15044D1A9C1090002CE567 /* ZIMMessageDigest.m */; };
+		CA1504721A9C11DE002CE567 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = CA1504711A9C11DE002CE567 /* db.sqlite */; };
+		CA1504741A9C12C4002CE567 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA1504731A9C12C4002CE567 /* images.xcassets */; };
+		CA1504761A9C1312002CE567 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CA1504751A9C1312002CE567 /* libsqlite3.0.dylib */; };
+		CA15047B1A9C199E002CE567 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = CA15047A1A9C199E002CE567 /* Movie.m */; };
+		CA6CFE4E1A9EB2140028A1F6 /* MovieDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6CFE4D1A9EB2140028A1F6 /* MovieDAO.m */; };
+		CA6CFE541A9FD8CA0028A1F6 /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6CFE531A9FD8CA0028A1F6 /* MovieCell.m */; };
+		CA6CFE571AA21F380028A1F6 /* MovieAdd.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA6CFE561AA21F380028A1F6 /* MovieAdd.xib */; };
+		CA6CFE5A1AA2235A0028A1F6 /* MovieAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6CFE591AA2235A0028A1F6 /* MovieAdd.m */; };
+		CAD3BCDD1AAB865800662814 /* MovieEdit.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD3BCDC1AAB865800662814 /* MovieEdit.xib */; };
+		CAD3BCE01AAB874C00662814 /* MovieEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD3BCDF1AAB874C00662814 /* MovieEdit.m */; };
+		CAD3BCF61AAD189700662814 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD3BCF51AAD189700662814 /* CoreGraphics.framework */; };
+		CAD3BCF91AAD1C8700662814 /* crudTest.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD3BCF81AAD1C8700662814 /* crudTest.m */; };
+		CAD3BCFC1AAD1D2700662814 /* KIFUITestActor+Cinefilo.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD3BCFB1AAD1D2700662814 /* KIFUITestActor+Cinefilo.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CA1503E91A9BFB9C002CE567 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA1503C71A9BFB9B002CE567 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA1503CE1A9BFB9C002CE567;
+			remoteInfo = "ios-orm";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CA1503CF1A9BFB9C002CE567 /* ios-orm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-orm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA1503D31A9BFB9C002CE567 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA1503D41A9BFB9C002CE567 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CA1503D61A9BFB9C002CE567 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CA1503D71A9BFB9C002CE567 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CA1503D91A9BFB9C002CE567 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CA1503DA1A9BFB9C002CE567 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CA1503DD1A9BFB9C002CE567 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CA1503E21A9BFB9C002CE567 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CA1503E81A9BFB9C002CE567 /* ios-ormTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-ormTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA1503ED1A9BFB9C002CE567 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA1503FA1A9C1090002CE567 /* db.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = db.plist; sourceTree = "<group>"; };
+		CA1503FD1A9C1090002CE567 /* ZIMDbConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMDbConnection.h; sourceTree = "<group>"; };
+		CA1503FE1A9C1090002CE567 /* ZIMDbConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMDbConnection.m; sourceTree = "<group>"; };
+		CA1503FF1A9C1090002CE567 /* ZIMDbConnectionPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMDbConnectionPool.h; sourceTree = "<group>"; };
+		CA1504001A9C1090002CE567 /* ZIMDbConnectionPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMDbConnectionPool.m; sourceTree = "<group>"; };
+		CA1504011A9C1090002CE567 /* ZIMDbSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMDbSdk.h; sourceTree = "<group>"; };
+		CA1504031A9C1090002CE567 /* NSString+ZIMString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZIMString.h"; sourceTree = "<group>"; };
+		CA1504041A9C1090002CE567 /* NSString+ZIMString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZIMString.m"; sourceTree = "<group>"; };
+		CA1504061A9C1090002CE567 /* ZIMOrmModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMOrmModel.h; sourceTree = "<group>"; };
+		CA1504071A9C1090002CE567 /* ZIMOrmModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMOrmModel.m; sourceTree = "<group>"; };
+		CA1504081A9C1090002CE567 /* ZIMOrmModelDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMOrmModelDelegate.h; sourceTree = "<group>"; };
+		CA1504091A9C1090002CE567 /* ZIMOrmSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMOrmSdk.h; sourceTree = "<group>"; };
+		CA15040A1A9C1090002CE567 /* ZIMOrmSelectStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMOrmSelectStatement.h; sourceTree = "<group>"; };
+		CA15040B1A9C1090002CE567 /* ZIMOrmSelectStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMOrmSelectStatement.m; sourceTree = "<group>"; };
+		CA15040D1A9C1090002CE567 /* ZIMSqlAlterTableStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlAlterTableStatement.h; sourceTree = "<group>"; };
+		CA15040E1A9C1090002CE567 /* ZIMSqlAlterTableStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlAlterTableStatement.m; sourceTree = "<group>"; };
+		CA15040F1A9C1090002CE567 /* ZIMSqlAnalyzeStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlAnalyzeStatement.h; sourceTree = "<group>"; };
+		CA1504101A9C1090002CE567 /* ZIMSqlAnalyzeStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlAnalyzeStatement.m; sourceTree = "<group>"; };
+		CA1504111A9C1090002CE567 /* ZIMSqlAttachStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlAttachStatement.h; sourceTree = "<group>"; };
+		CA1504121A9C1090002CE567 /* ZIMSqlAttachStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlAttachStatement.m; sourceTree = "<group>"; };
+		CA1504131A9C1090002CE567 /* ZIMSqlCreateIndexStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlCreateIndexStatement.h; sourceTree = "<group>"; };
+		CA1504141A9C1090002CE567 /* ZIMSqlCreateIndexStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlCreateIndexStatement.m; sourceTree = "<group>"; };
+		CA1504151A9C1090002CE567 /* ZIMSqlCreateTableStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlCreateTableStatement.h; sourceTree = "<group>"; };
+		CA1504161A9C1090002CE567 /* ZIMSqlCreateTableStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlCreateTableStatement.m; sourceTree = "<group>"; };
+		CA1504171A9C1090002CE567 /* ZIMSqlCreateTriggerStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlCreateTriggerStatement.h; sourceTree = "<group>"; };
+		CA1504181A9C1090002CE567 /* ZIMSqlCreateTriggerStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlCreateTriggerStatement.m; sourceTree = "<group>"; };
+		CA1504191A9C1090002CE567 /* ZIMSqlCreateViewStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlCreateViewStatement.h; sourceTree = "<group>"; };
+		CA15041A1A9C1090002CE567 /* ZIMSqlCreateViewStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlCreateViewStatement.m; sourceTree = "<group>"; };
+		CA15041B1A9C1090002CE567 /* ZIMSqlDataControlCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlDataControlCommand.h; sourceTree = "<group>"; };
+		CA15041C1A9C1090002CE567 /* ZIMSqlDataDefinitionCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlDataDefinitionCommand.h; sourceTree = "<group>"; };
+		CA15041D1A9C1090002CE567 /* ZIMSqlDataManipulationCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlDataManipulationCommand.h; sourceTree = "<group>"; };
+		CA15041E1A9C1090002CE567 /* ZIMSqlDeleteStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlDeleteStatement.h; sourceTree = "<group>"; };
+		CA15041F1A9C1090002CE567 /* ZIMSqlDeleteStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlDeleteStatement.m; sourceTree = "<group>"; };
+		CA1504201A9C1090002CE567 /* ZIMSqlDetachStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlDetachStatement.h; sourceTree = "<group>"; };
+		CA1504211A9C1090002CE567 /* ZIMSqlDetachStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlDetachStatement.m; sourceTree = "<group>"; };
+		CA1504221A9C1090002CE567 /* ZIMSqlDropIndexStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlDropIndexStatement.h; sourceTree = "<group>"; };
+		CA1504231A9C1090002CE567 /* ZIMSqlDropIndexStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlDropIndexStatement.m; sourceTree = "<group>"; };
+		CA1504241A9C1090002CE567 /* ZIMSqlDropTableStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlDropTableStatement.h; sourceTree = "<group>"; };
+		CA1504251A9C1090002CE567 /* ZIMSqlDropTableStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlDropTableStatement.m; sourceTree = "<group>"; };
+		CA1504261A9C1090002CE567 /* ZIMSqlDropTriggerStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlDropTriggerStatement.h; sourceTree = "<group>"; };
+		CA1504271A9C1090002CE567 /* ZIMSqlDropTriggerStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlDropTriggerStatement.m; sourceTree = "<group>"; };
+		CA1504281A9C1090002CE567 /* ZIMSqlDropViewStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlDropViewStatement.h; sourceTree = "<group>"; };
+		CA1504291A9C1090002CE567 /* ZIMSqlDropViewStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlDropViewStatement.m; sourceTree = "<group>"; };
+		CA15042A1A9C1090002CE567 /* ZIMSqlExplainStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlExplainStatement.h; sourceTree = "<group>"; };
+		CA15042B1A9C1090002CE567 /* ZIMSqlExplainStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlExplainStatement.m; sourceTree = "<group>"; };
+		CA15042C1A9C1090002CE567 /* ZIMSqlExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlExpression.h; sourceTree = "<group>"; };
+		CA15042D1A9C1090002CE567 /* ZIMSqlExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlExpression.m; sourceTree = "<group>"; };
+		CA15042E1A9C1090002CE567 /* ZIMSqlInsertStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlInsertStatement.h; sourceTree = "<group>"; };
+		CA15042F1A9C1090002CE567 /* ZIMSqlInsertStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlInsertStatement.m; sourceTree = "<group>"; };
+		CA1504301A9C1090002CE567 /* ZIMSqlPreparedStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlPreparedStatement.h; sourceTree = "<group>"; };
+		CA1504311A9C1090002CE567 /* ZIMSqlPreparedStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlPreparedStatement.m; sourceTree = "<group>"; };
+		CA1504321A9C1090002CE567 /* ZIMSqlReindexStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlReindexStatement.h; sourceTree = "<group>"; };
+		CA1504331A9C1090002CE567 /* ZIMSqlReindexStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlReindexStatement.m; sourceTree = "<group>"; };
+		CA1504341A9C1090002CE567 /* ZIMSqlSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlSdk.h; sourceTree = "<group>"; };
+		CA1504351A9C1090002CE567 /* ZIMSqlSelectStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlSelectStatement.h; sourceTree = "<group>"; };
+		CA1504361A9C1090002CE567 /* ZIMSqlSelectStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlSelectStatement.m; sourceTree = "<group>"; };
+		CA1504371A9C1090002CE567 /* ZIMSqlShowColumnsStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlShowColumnsStatement.h; sourceTree = "<group>"; };
+		CA1504381A9C1090002CE567 /* ZIMSqlShowColumnsStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlShowColumnsStatement.m; sourceTree = "<group>"; };
+		CA1504391A9C1090002CE567 /* ZIMSqlShowGrantsStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlShowGrantsStatement.h; sourceTree = "<group>"; };
+		CA15043A1A9C1090002CE567 /* ZIMSqlShowGrantsStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlShowGrantsStatement.m; sourceTree = "<group>"; };
+		CA15043B1A9C1090002CE567 /* ZIMSqlShowTablesStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlShowTablesStatement.h; sourceTree = "<group>"; };
+		CA15043C1A9C1090002CE567 /* ZIMSqlShowTablesStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlShowTablesStatement.m; sourceTree = "<group>"; };
+		CA15043D1A9C1090002CE567 /* ZIMSqlShowTriggersStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlShowTriggersStatement.h; sourceTree = "<group>"; };
+		CA15043E1A9C1090002CE567 /* ZIMSqlShowTriggersStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlShowTriggersStatement.m; sourceTree = "<group>"; };
+		CA15043F1A9C1090002CE567 /* ZIMSqlShowViewsStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlShowViewsStatement.h; sourceTree = "<group>"; };
+		CA1504401A9C1090002CE567 /* ZIMSqlShowViewsStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlShowViewsStatement.m; sourceTree = "<group>"; };
+		CA1504411A9C1090002CE567 /* ZIMSqlStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlStatement.h; sourceTree = "<group>"; };
+		CA1504421A9C1090002CE567 /* ZIMSqlTokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlTokenizer.h; sourceTree = "<group>"; };
+		CA1504431A9C1090002CE567 /* ZIMSqlTokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlTokenizer.m; sourceTree = "<group>"; };
+		CA1504441A9C1090002CE567 /* ZIMSqlTransactionControlCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlTransactionControlCommand.h; sourceTree = "<group>"; };
+		CA1504451A9C1090002CE567 /* ZIMSqlTruncateTableStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlTruncateTableStatement.h; sourceTree = "<group>"; };
+		CA1504461A9C1090002CE567 /* ZIMSqlTruncateTableStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlTruncateTableStatement.m; sourceTree = "<group>"; };
+		CA1504471A9C1090002CE567 /* ZIMSqlUpdateStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlUpdateStatement.h; sourceTree = "<group>"; };
+		CA1504481A9C1090002CE567 /* ZIMSqlUpdateStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlUpdateStatement.m; sourceTree = "<group>"; };
+		CA1504491A9C1090002CE567 /* ZIMSqlUpsertStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMSqlUpsertStatement.h; sourceTree = "<group>"; };
+		CA15044A1A9C1090002CE567 /* ZIMSqlUpsertStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMSqlUpsertStatement.m; sourceTree = "<group>"; };
+		CA15044C1A9C1090002CE567 /* ZIMMessageDigest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZIMMessageDigest.h; sourceTree = "<group>"; };
+		CA15044D1A9C1090002CE567 /* ZIMMessageDigest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZIMMessageDigest.m; sourceTree = "<group>"; };
+		CA1504711A9C11DE002CE567 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
+		CA1504731A9C12C4002CE567 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
+		CA1504751A9C1312002CE567 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		CA1504791A9C199E002CE567 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		CA15047A1A9C199E002CE567 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		CA6CFE4C1A9EB2140028A1F6 /* MovieDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDAO.h; sourceTree = "<group>"; };
+		CA6CFE4D1A9EB2140028A1F6 /* MovieDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDAO.m; sourceTree = "<group>"; };
+		CA6CFE4F1A9EB7E10028A1F6 /* DAOConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DAOConstants.h; sourceTree = "<group>"; };
+		CA6CFE501A9EB8680028A1F6 /* IOSORM-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IOSORM-Prefix.pch"; sourceTree = "<group>"; };
+		CA6CFE521A9FD8CA0028A1F6 /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
+		CA6CFE531A9FD8CA0028A1F6 /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
+		CA6CFE561AA21F380028A1F6 /* MovieAdd.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieAdd.xib; sourceTree = "<group>"; };
+		CA6CFE581AA2235A0028A1F6 /* MovieAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieAdd.h; sourceTree = "<group>"; };
+		CA6CFE591AA2235A0028A1F6 /* MovieAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieAdd.m; sourceTree = "<group>"; };
+		CAD3BCDC1AAB865800662814 /* MovieEdit.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieEdit.xib; sourceTree = "<group>"; };
+		CAD3BCDE1AAB874C00662814 /* MovieEdit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieEdit.h; sourceTree = "<group>"; };
+		CAD3BCDF1AAB874C00662814 /* MovieEdit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieEdit.m; sourceTree = "<group>"; };
+		CAD3BCF51AAD189700662814 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CAD3BCF71AAD1C8700662814 /* crudTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crudTest.h; sourceTree = "<group>"; };
+		CAD3BCF81AAD1C8700662814 /* crudTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = crudTest.m; sourceTree = "<group>"; };
+		CAD3BCFA1AAD1D2700662814 /* KIFUITestActor+Cinefilo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KIFUITestActor+Cinefilo.h"; sourceTree = "<group>"; };
+		CAD3BCFB1AAD1D2700662814 /* KIFUITestActor+Cinefilo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KIFUITestActor+Cinefilo.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA1503CC1A9BFB9C002CE567 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA1504761A9C1312002CE567 /* libsqlite3.0.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA1503E51A9BFB9C002CE567 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAD3BCF61AAD189700662814 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CA1503C61A9BFB9B002CE567 = {
+			isa = PBXGroup;
+			children = (
+				CAD3BCF51AAD189700662814 /* CoreGraphics.framework */,
+				CA1504751A9C1312002CE567 /* libsqlite3.0.dylib */,
+				CA1503D11A9BFB9C002CE567 /* ios-orm */,
+				CA1503EB1A9BFB9C002CE567 /* ios-ormTests */,
+				CA1503D01A9BFB9C002CE567 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CA1503D01A9BFB9C002CE567 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA1503CF1A9BFB9C002CE567 /* ios-orm.app */,
+				CA1503E81A9BFB9C002CE567 /* ios-ormTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA1503D11A9BFB9C002CE567 /* ios-orm */ = {
+			isa = PBXGroup;
+			children = (
+				CA6CFE551AA21F080028A1F6 /* View */,
+				CA6CFE4B1A9EB1EE0028A1F6 /* DAO */,
+				CA1504781A9C196B002CE567 /* model */,
+				CA1504771A9C144A002CE567 /* Cell */,
+				CA1503F81A9C1090002CE567 /* zim */,
+				CA1503D61A9BFB9C002CE567 /* AppDelegate.h */,
+				CA1503D71A9BFB9C002CE567 /* AppDelegate.m */,
+				CA1503D91A9BFB9C002CE567 /* ViewController.h */,
+				CA1503DA1A9BFB9C002CE567 /* ViewController.m */,
+				CA1503DC1A9BFB9C002CE567 /* Main.storyboard */,
+				CA1503E11A9BFB9C002CE567 /* LaunchScreen.xib */,
+				CA1504731A9C12C4002CE567 /* images.xcassets */,
+				CA1503D21A9BFB9C002CE567 /* Supporting Files */,
+			);
+			path = "ios-orm";
+			sourceTree = "<group>";
+		};
+		CA1503D21A9BFB9C002CE567 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CA1503D31A9BFB9C002CE567 /* Info.plist */,
+				CA1503D41A9BFB9C002CE567 /* main.m */,
+				CA6CFE501A9EB8680028A1F6 /* IOSORM-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CA1503EB1A9BFB9C002CE567 /* ios-ormTests */ = {
+			isa = PBXGroup;
+			children = (
+				CA1503EC1A9BFB9C002CE567 /* Supporting Files */,
+				CAD3BCF71AAD1C8700662814 /* crudTest.h */,
+				CAD3BCF81AAD1C8700662814 /* crudTest.m */,
+				CAD3BCFA1AAD1D2700662814 /* KIFUITestActor+Cinefilo.h */,
+				CAD3BCFB1AAD1D2700662814 /* KIFUITestActor+Cinefilo.m */,
+			);
+			path = "ios-ormTests";
+			sourceTree = "<group>";
+		};
+		CA1503EC1A9BFB9C002CE567 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CA1503ED1A9BFB9C002CE567 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CA1503F81A9C1090002CE567 /* zim */ = {
+			isa = PBXGroup;
+			children = (
+				CA1504711A9C11DE002CE567 /* db.sqlite */,
+				CA1503F91A9C1090002CE567 /* cfg */,
+				CA1503FB1A9C1090002CE567 /* src */,
+			);
+			path = zim;
+			sourceTree = "<group>";
+		};
+		CA1503F91A9C1090002CE567 /* cfg */ = {
+			isa = PBXGroup;
+			children = (
+				CA1503FA1A9C1090002CE567 /* db.plist */,
+			);
+			path = cfg;
+			sourceTree = "<group>";
+		};
+		CA1503FB1A9C1090002CE567 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				CA1503FC1A9C1090002CE567 /* db */,
+				CA1504021A9C1090002CE567 /* ext */,
+				CA1504051A9C1090002CE567 /* orm */,
+				CA15040C1A9C1090002CE567 /* sql */,
+				CA15044B1A9C1090002CE567 /* util */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		CA1503FC1A9C1090002CE567 /* db */ = {
+			isa = PBXGroup;
+			children = (
+				CA1503FD1A9C1090002CE567 /* ZIMDbConnection.h */,
+				CA1503FE1A9C1090002CE567 /* ZIMDbConnection.m */,
+				CA1503FF1A9C1090002CE567 /* ZIMDbConnectionPool.h */,
+				CA1504001A9C1090002CE567 /* ZIMDbConnectionPool.m */,
+				CA1504011A9C1090002CE567 /* ZIMDbSdk.h */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		CA1504021A9C1090002CE567 /* ext */ = {
+			isa = PBXGroup;
+			children = (
+				CA1504031A9C1090002CE567 /* NSString+ZIMString.h */,
+				CA1504041A9C1090002CE567 /* NSString+ZIMString.m */,
+			);
+			path = ext;
+			sourceTree = "<group>";
+		};
+		CA1504051A9C1090002CE567 /* orm */ = {
+			isa = PBXGroup;
+			children = (
+				CA1504061A9C1090002CE567 /* ZIMOrmModel.h */,
+				CA1504071A9C1090002CE567 /* ZIMOrmModel.m */,
+				CA1504081A9C1090002CE567 /* ZIMOrmModelDelegate.h */,
+				CA1504091A9C1090002CE567 /* ZIMOrmSdk.h */,
+				CA15040A1A9C1090002CE567 /* ZIMOrmSelectStatement.h */,
+				CA15040B1A9C1090002CE567 /* ZIMOrmSelectStatement.m */,
+			);
+			path = orm;
+			sourceTree = "<group>";
+		};
+		CA15040C1A9C1090002CE567 /* sql */ = {
+			isa = PBXGroup;
+			children = (
+				CA15040D1A9C1090002CE567 /* ZIMSqlAlterTableStatement.h */,
+				CA15040E1A9C1090002CE567 /* ZIMSqlAlterTableStatement.m */,
+				CA15040F1A9C1090002CE567 /* ZIMSqlAnalyzeStatement.h */,
+				CA1504101A9C1090002CE567 /* ZIMSqlAnalyzeStatement.m */,
+				CA1504111A9C1090002CE567 /* ZIMSqlAttachStatement.h */,
+				CA1504121A9C1090002CE567 /* ZIMSqlAttachStatement.m */,
+				CA1504131A9C1090002CE567 /* ZIMSqlCreateIndexStatement.h */,
+				CA1504141A9C1090002CE567 /* ZIMSqlCreateIndexStatement.m */,
+				CA1504151A9C1090002CE567 /* ZIMSqlCreateTableStatement.h */,
+				CA1504161A9C1090002CE567 /* ZIMSqlCreateTableStatement.m */,
+				CA1504171A9C1090002CE567 /* ZIMSqlCreateTriggerStatement.h */,
+				CA1504181A9C1090002CE567 /* ZIMSqlCreateTriggerStatement.m */,
+				CA1504191A9C1090002CE567 /* ZIMSqlCreateViewStatement.h */,
+				CA15041A1A9C1090002CE567 /* ZIMSqlCreateViewStatement.m */,
+				CA15041B1A9C1090002CE567 /* ZIMSqlDataControlCommand.h */,
+				CA15041C1A9C1090002CE567 /* ZIMSqlDataDefinitionCommand.h */,
+				CA15041D1A9C1090002CE567 /* ZIMSqlDataManipulationCommand.h */,
+				CA15041E1A9C1090002CE567 /* ZIMSqlDeleteStatement.h */,
+				CA15041F1A9C1090002CE567 /* ZIMSqlDeleteStatement.m */,
+				CA1504201A9C1090002CE567 /* ZIMSqlDetachStatement.h */,
+				CA1504211A9C1090002CE567 /* ZIMSqlDetachStatement.m */,
+				CA1504221A9C1090002CE567 /* ZIMSqlDropIndexStatement.h */,
+				CA1504231A9C1090002CE567 /* ZIMSqlDropIndexStatement.m */,
+				CA1504241A9C1090002CE567 /* ZIMSqlDropTableStatement.h */,
+				CA1504251A9C1090002CE567 /* ZIMSqlDropTableStatement.m */,
+				CA1504261A9C1090002CE567 /* ZIMSqlDropTriggerStatement.h */,
+				CA1504271A9C1090002CE567 /* ZIMSqlDropTriggerStatement.m */,
+				CA1504281A9C1090002CE567 /* ZIMSqlDropViewStatement.h */,
+				CA1504291A9C1090002CE567 /* ZIMSqlDropViewStatement.m */,
+				CA15042A1A9C1090002CE567 /* ZIMSqlExplainStatement.h */,
+				CA15042B1A9C1090002CE567 /* ZIMSqlExplainStatement.m */,
+				CA15042C1A9C1090002CE567 /* ZIMSqlExpression.h */,
+				CA15042D1A9C1090002CE567 /* ZIMSqlExpression.m */,
+				CA15042E1A9C1090002CE567 /* ZIMSqlInsertStatement.h */,
+				CA15042F1A9C1090002CE567 /* ZIMSqlInsertStatement.m */,
+				CA1504301A9C1090002CE567 /* ZIMSqlPreparedStatement.h */,
+				CA1504311A9C1090002CE567 /* ZIMSqlPreparedStatement.m */,
+				CA1504321A9C1090002CE567 /* ZIMSqlReindexStatement.h */,
+				CA1504331A9C1090002CE567 /* ZIMSqlReindexStatement.m */,
+				CA1504341A9C1090002CE567 /* ZIMSqlSdk.h */,
+				CA1504351A9C1090002CE567 /* ZIMSqlSelectStatement.h */,
+				CA1504361A9C1090002CE567 /* ZIMSqlSelectStatement.m */,
+				CA1504371A9C1090002CE567 /* ZIMSqlShowColumnsStatement.h */,
+				CA1504381A9C1090002CE567 /* ZIMSqlShowColumnsStatement.m */,
+				CA1504391A9C1090002CE567 /* ZIMSqlShowGrantsStatement.h */,
+				CA15043A1A9C1090002CE567 /* ZIMSqlShowGrantsStatement.m */,
+				CA15043B1A9C1090002CE567 /* ZIMSqlShowTablesStatement.h */,
+				CA15043C1A9C1090002CE567 /* ZIMSqlShowTablesStatement.m */,
+				CA15043D1A9C1090002CE567 /* ZIMSqlShowTriggersStatement.h */,
+				CA15043E1A9C1090002CE567 /* ZIMSqlShowTriggersStatement.m */,
+				CA15043F1A9C1090002CE567 /* ZIMSqlShowViewsStatement.h */,
+				CA1504401A9C1090002CE567 /* ZIMSqlShowViewsStatement.m */,
+				CA1504411A9C1090002CE567 /* ZIMSqlStatement.h */,
+				CA1504421A9C1090002CE567 /* ZIMSqlTokenizer.h */,
+				CA1504431A9C1090002CE567 /* ZIMSqlTokenizer.m */,
+				CA1504441A9C1090002CE567 /* ZIMSqlTransactionControlCommand.h */,
+				CA1504451A9C1090002CE567 /* ZIMSqlTruncateTableStatement.h */,
+				CA1504461A9C1090002CE567 /* ZIMSqlTruncateTableStatement.m */,
+				CA1504471A9C1090002CE567 /* ZIMSqlUpdateStatement.h */,
+				CA1504481A9C1090002CE567 /* ZIMSqlUpdateStatement.m */,
+				CA1504491A9C1090002CE567 /* ZIMSqlUpsertStatement.h */,
+				CA15044A1A9C1090002CE567 /* ZIMSqlUpsertStatement.m */,
+			);
+			path = sql;
+			sourceTree = "<group>";
+		};
+		CA15044B1A9C1090002CE567 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				CA15044C1A9C1090002CE567 /* ZIMMessageDigest.h */,
+				CA15044D1A9C1090002CE567 /* ZIMMessageDigest.m */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		CA1504771A9C144A002CE567 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CA6CFE521A9FD8CA0028A1F6 /* MovieCell.h */,
+				CA6CFE531A9FD8CA0028A1F6 /* MovieCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		CA1504781A9C196B002CE567 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				CA1504791A9C199E002CE567 /* Movie.h */,
+				CA15047A1A9C199E002CE567 /* Movie.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		CA6CFE4B1A9EB1EE0028A1F6 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				CA6CFE4C1A9EB2140028A1F6 /* MovieDAO.h */,
+				CA6CFE4D1A9EB2140028A1F6 /* MovieDAO.m */,
+				CA6CFE4F1A9EB7E10028A1F6 /* DAOConstants.h */,
+			);
+			name = DAO;
+			sourceTree = "<group>";
+		};
+		CA6CFE551AA21F080028A1F6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA6CFE561AA21F380028A1F6 /* MovieAdd.xib */,
+				CA6CFE581AA2235A0028A1F6 /* MovieAdd.h */,
+				CA6CFE591AA2235A0028A1F6 /* MovieAdd.m */,
+				CAD3BCDC1AAB865800662814 /* MovieEdit.xib */,
+				CAD3BCDE1AAB874C00662814 /* MovieEdit.h */,
+				CAD3BCDF1AAB874C00662814 /* MovieEdit.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CA1503CE1A9BFB9C002CE567 /* ios-orm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA1503F21A9BFB9C002CE567 /* Build configuration list for PBXNativeTarget "ios-orm" */;
+			buildPhases = (
+				CA1503CB1A9BFB9C002CE567 /* Sources */,
+				CA1503CC1A9BFB9C002CE567 /* Frameworks */,
+				CA1503CD1A9BFB9C002CE567 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ios-orm";
+			productName = "ios-orm";
+			productReference = CA1503CF1A9BFB9C002CE567 /* ios-orm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CA1503E71A9BFB9C002CE567 /* ios-ormTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA1503F51A9BFB9C002CE567 /* Build configuration list for PBXNativeTarget "ios-ormTests" */;
+			buildPhases = (
+				CA1503E41A9BFB9C002CE567 /* Sources */,
+				CA1503E51A9BFB9C002CE567 /* Frameworks */,
+				CA1503E61A9BFB9C002CE567 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA1503EA1A9BFB9C002CE567 /* PBXTargetDependency */,
+			);
+			name = "ios-ormTests";
+			productName = "ios-ormTests";
+			productReference = CA1503E81A9BFB9C002CE567 /* ios-ormTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA1503C71A9BFB9B002CE567 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Emiliano Eloi";
+				TargetAttributes = {
+					CA1503CE1A9BFB9C002CE567 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					CA1503E71A9BFB9C002CE567 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = CA1503CE1A9BFB9C002CE567;
+					};
+				};
+			};
+			buildConfigurationList = CA1503CA1A9BFB9B002CE567 /* Build configuration list for PBXProject "ios-orm" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CA1503C61A9BFB9B002CE567;
+			productRefGroup = CA1503D01A9BFB9C002CE567 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA1503CE1A9BFB9C002CE567 /* ios-orm */,
+				CA1503E71A9BFB9C002CE567 /* ios-ormTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA1503CD1A9BFB9C002CE567 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA1504721A9C11DE002CE567 /* db.sqlite in Resources */,
+				CA15044E1A9C1090002CE567 /* db.plist in Resources */,
+				CA1503DE1A9BFB9C002CE567 /* Main.storyboard in Resources */,
+				CA1503E31A9BFB9C002CE567 /* LaunchScreen.xib in Resources */,
+				CA6CFE571AA21F380028A1F6 /* MovieAdd.xib in Resources */,
+				CAD3BCDD1AAB865800662814 /* MovieEdit.xib in Resources */,
+				CA1504741A9C12C4002CE567 /* images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA1503E61A9BFB9C002CE567 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA1503CB1A9BFB9C002CE567 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA15045C1A9C1090002CE567 /* ZIMSqlDetachStatement.m in Sources */,
+				CA15046C1A9C1090002CE567 /* ZIMSqlTokenizer.m in Sources */,
+				CAD3BCE01AAB874C00662814 /* MovieEdit.m in Sources */,
+				CA1504601A9C1090002CE567 /* ZIMSqlDropViewStatement.m in Sources */,
+				CA1504581A9C1090002CE567 /* ZIMSqlCreateTableStatement.m in Sources */,
+				CA1504571A9C1090002CE567 /* ZIMSqlCreateIndexStatement.m in Sources */,
+				CA1504631A9C1090002CE567 /* ZIMSqlInsertStatement.m in Sources */,
+				CA6CFE541A9FD8CA0028A1F6 /* MovieCell.m in Sources */,
+				CA1504551A9C1090002CE567 /* ZIMSqlAnalyzeStatement.m in Sources */,
+				CA1504541A9C1090002CE567 /* ZIMSqlAlterTableStatement.m in Sources */,
+				CA15046D1A9C1090002CE567 /* ZIMSqlTruncateTableStatement.m in Sources */,
+				CA1503DB1A9BFB9C002CE567 /* ViewController.m in Sources */,
+				CA1504681A9C1090002CE567 /* ZIMSqlShowGrantsStatement.m in Sources */,
+				CA15045A1A9C1090002CE567 /* ZIMSqlCreateViewStatement.m in Sources */,
+				CA1504651A9C1090002CE567 /* ZIMSqlReindexStatement.m in Sources */,
+				CA15045D1A9C1090002CE567 /* ZIMSqlDropIndexStatement.m in Sources */,
+				CA1504621A9C1090002CE567 /* ZIMSqlExpression.m in Sources */,
+				CA6CFE5A1AA2235A0028A1F6 /* MovieAdd.m in Sources */,
+				CA1504641A9C1090002CE567 /* ZIMSqlPreparedStatement.m in Sources */,
+				CA1504661A9C1090002CE567 /* ZIMSqlSelectStatement.m in Sources */,
+				CA1504691A9C1090002CE567 /* ZIMSqlShowTablesStatement.m in Sources */,
+				CA1503D81A9BFB9C002CE567 /* AppDelegate.m in Sources */,
+				CA1504501A9C1090002CE567 /* ZIMDbConnectionPool.m in Sources */,
+				CA1504521A9C1090002CE567 /* ZIMOrmModel.m in Sources */,
+				CA15046E1A9C1090002CE567 /* ZIMSqlUpdateStatement.m in Sources */,
+				CA15047B1A9C199E002CE567 /* Movie.m in Sources */,
+				CA1504591A9C1090002CE567 /* ZIMSqlCreateTriggerStatement.m in Sources */,
+				CA15045E1A9C1090002CE567 /* ZIMSqlDropTableStatement.m in Sources */,
+				CA15045B1A9C1090002CE567 /* ZIMSqlDeleteStatement.m in Sources */,
+				CA15044F1A9C1090002CE567 /* ZIMDbConnection.m in Sources */,
+				CA1504531A9C1090002CE567 /* ZIMOrmSelectStatement.m in Sources */,
+				CA15046A1A9C1090002CE567 /* ZIMSqlShowTriggersStatement.m in Sources */,
+				CA6CFE4E1A9EB2140028A1F6 /* MovieDAO.m in Sources */,
+				CA15046B1A9C1090002CE567 /* ZIMSqlShowViewsStatement.m in Sources */,
+				CA1504611A9C1090002CE567 /* ZIMSqlExplainStatement.m in Sources */,
+				CA1504561A9C1090002CE567 /* ZIMSqlAttachStatement.m in Sources */,
+				CA15045F1A9C1090002CE567 /* ZIMSqlDropTriggerStatement.m in Sources */,
+				CA1504701A9C1090002CE567 /* ZIMMessageDigest.m in Sources */,
+				CA1503D51A9BFB9C002CE567 /* main.m in Sources */,
+				CA1504671A9C1090002CE567 /* ZIMSqlShowColumnsStatement.m in Sources */,
+				CA15046F1A9C1090002CE567 /* ZIMSqlUpsertStatement.m in Sources */,
+				CA1504511A9C1090002CE567 /* NSString+ZIMString.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA1503E41A9BFB9C002CE567 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAD3BCF91AAD1C8700662814 /* crudTest.m in Sources */,
+				CAD3BCFC1AAD1D2700662814 /* KIFUITestActor+Cinefilo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA1503EA1A9BFB9C002CE567 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA1503CE1A9BFB9C002CE567 /* ios-orm */;
+			targetProxy = CA1503E91A9BFB9C002CE567 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CA1503DC1A9BFB9C002CE567 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA1503DD1A9BFB9C002CE567 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CA1503E11A9BFB9C002CE567 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA1503E21A9BFB9C002CE567 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CA1503F01A9BFB9C002CE567 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CA1503F11A9BFB9C002CE567 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA1503F31A9BFB9C002CE567 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "ios-orm/IOSORM-Prefix.pch";
+				INFOPLIST_FILE = "ios-orm/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CA1503F41A9BFB9C002CE567 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "ios-orm/IOSORM-Prefix.pch";
+				INFOPLIST_FILE = "ios-orm/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CA1503F61A9BFB9C002CE567 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ios-orm.app/ios-orm";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ios-ormTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-orm.app/ios-orm";
+			};
+			name = Debug;
+		};
+		CA1503F71A9BFB9C002CE567 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ios-orm.app/ios-orm";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ios-ormTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-orm.app/ios-orm";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA1503CA1A9BFB9B002CE567 /* Build configuration list for PBXProject "ios-orm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA1503F01A9BFB9C002CE567 /* Debug */,
+				CA1503F11A9BFB9C002CE567 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA1503F21A9BFB9C002CE567 /* Build configuration list for PBXNativeTarget "ios-orm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA1503F31A9BFB9C002CE567 /* Debug */,
+				CA1503F41A9BFB9C002CE567 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA1503F51A9BFB9C002CE567 /* Build configuration list for PBXNativeTarget "ios-ormTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA1503F61A9BFB9C002CE567 /* Debug */,
+				CA1503F71A9BFB9C002CE567 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CA1503C71A9BFB9B002CE567 /* Project object */;
+}
